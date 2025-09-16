@@ -1,0 +1,191 @@
+[
+  {
+    "id": 1,
+    "title": "Mobile App",
+    "subtitle": "Prototyping",
+    "progress": 78,
+    "timeLeft": "1 week left",
+    "date": "May 01, 2021",
+    "color": "bg-orange-500",
+    "progressColor": "bg-orange-500",
+    "badgeColor": "bg-orange-500",
+    "team": [
+      {
+        "id": 1,
+        "avatar": "/avatars/01.jpeg"
+      },
+      {
+        "id": 2,
+        "avatar": "/avatars/02.jpeg"
+      },
+      {
+        "id": 3,
+        "avatar": "/avatars/03.jpeg"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Design Learn Management System",
+    "subtitle": "UI/UX Design",
+    "progress": 32,
+    "timeLeft": "2 week left",
+    "date": "June 04, 2021",
+    "color": "bg-blue-200",
+    "progressColor": "bg-blue-500",
+    "badgeColor": "bg-blue-500",
+    "team": [
+      {
+        "id": 1,
+        "avatar": "/avatars/03.jpeg"
+      },
+      {
+        "id": 2,
+        "avatar": "/avatars/04.jpeg"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Chat Mobile App",
+    "subtitle": "Prototyping",
+    "progress": 64,
+    "timeLeft": "6 week left",
+    "date": "Oct 27, 2021",
+    "color": "bg-pink-200",
+    "progressColor": "bg-pink-500",
+    "badgeColor": "bg-pink-500",
+    "team": [
+      {
+        "id": 1,
+        "avatar": "/avatars/05.jpeg"
+      },
+      {
+        "id": 2,
+        "avatar": "/avatars/06.jpeg"
+      },
+      {
+        "id": 3,
+        "avatar": "/avatars/07.jpeg"
+      },
+      {
+        "id": 3,
+        "avatar": "/avatars/08.jpeg"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Store Dashboard",
+    "subtitle": "UI/UX Design",
+    "progress": 45,
+    "timeLeft": "3 week left",
+    "date": "Sep 16, 2021",
+    "color": "bg-green-200",
+    "progressColor": "bg-green-500",
+    "badgeColor": "bg-green-500",
+    "team": [
+      {
+        "id": 1,
+        "avatar": "/avatars/01.jpeg"
+      },
+      {
+        "id": 2,
+        "avatar": "/avatars/02.jpeg"
+      },
+      {
+        "id": 3,
+        "avatar": "/avatars/03.jpeg"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "NFT Marketplace App",
+    "subtitle": "Prototyping",
+    "progress": 69,
+    "timeLeft": "4 week left",
+    "date": "Jan 03, 2021",
+    "color": "bg-purple-200",
+    "progressColor": "bg-red-500",
+    "badgeColor": "bg-red-500",
+    "icon": "🎨",
+    "team": [
+      {
+        "id": 1,
+        "avatar": "/avatars/10.jpeg"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Mobile App",
+    "subtitle": "Prototyping",
+    "progress": 56,
+    "timeLeft": "2 week left",
+    "date": "May 09, 2021",
+    "color": "bg-blue-200",
+    "progressColor": "bg-blue-500",
+    "badgeColor": "bg-blue-500",
+    "team": [
+      {
+        "id": 1,
+        "avatar": "/avatars/01.jpeg"
+      },
+      {
+        "id": 2,
+        "avatar": "/avatars/02.jpeg"
+      },
+      {
+        "id": 3,
+        "avatar": "/avatars/03.jpeg"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "LMS App Design",
+    "subtitle": "UI/UX Design",
+    "progress": 78,
+    "timeLeft": "2 week left",
+    "date": "Jan 03, 2021",
+    "color": "bg-yellow-200",
+    "progressColor": "bg-orange-500",
+    "badgeColor": "bg-orange-500",
+    "team": [
+      {
+        "id": 1,
+        "avatar": "/avatars/03.jpeg"
+      },
+      {
+        "id": 2,
+        "avatar": "/avatars/06.jpeg"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Design Learn Management System",
+    "subtitle": "UI/UX Design",
+    "progress": 25,
+    "timeLeft": "1 week left",
+    "date": "June 04, 2021",
+    "color": "bg-blue-200",
+    "progressColor": "bg-blue-500",
+    "badgeColor": "bg-blue-500",
+    "team": [
+      {
+        "id": 1,
+        "avatar": "/avatars/01.jpeg"
+      },
+      {
+        "id": 2,
+        "avatar": "/avatars/02.jpeg"
+      },
+      {
+        "id": 3,
+        "avatar": "/avatars/03.jpeg"
+      }
+    ]
+  }
+]

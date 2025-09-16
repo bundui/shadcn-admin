@@ -1,0 +1,459 @@
+[
+  {
+    "id": 1,
+    "date": "10 minutes",
+    "last_message": "Great! Looking forward to it. See you later!",
+    "status": "sent",
+    "is_archive": false,
+    "messages": [
+      {
+        "id": 1,
+        "content": "Sorry :( send you as soon as possible.",
+        "type": "text",
+        "read": true,
+        "own_message": true
+      },
+      {
+        "id": 2,
+        "content": "I know how important this file is to you. You can trust me ;) I know how important this file is to you. You can trust me ;) know how important this file is to you. You can trust me ;)",
+        "type": "text",
+        "read": true,
+        "own_message": false
+      },
+      {
+        "id": 3,
+        "type": "file",
+        "data": {
+          "file_name": "resume.pdf",
+          "path": "/files/resume.pdf",
+          "size": "10KB"
+        },
+        "read": false,
+        "own_message": false
+      },
+      {
+        "id": 44,
+        "content": "I know how important this file is to you. You can trust me ;)  me ;)",
+        "type": "text",
+        "read": true,
+        "own_message": true
+      },
+      {
+        "id": 5,
+        "content": "I know how important this file is to you. You can trust me ;) I know how important this file is to you. You can trust me ;) know how important this file is to you. You can trust me ;)",
+        "type": "text",
+        "read": true,
+        "own_message": false
+      },
+      {
+        "id": 6,
+        "content": "I know how important this file is to you. You can trust me ;) I know how important this file is to you. You can trust me ;) know how important this file is to you. You can trust me ;)",
+        "type": "text",
+        "read": true,
+        "own_message": false
+      },
+      {
+        "id": 7,
+        "content": "I know how important this file is to you. You can trust me ;) I know how important this file is to you. You can trust me ;) know how important this file is to you. You can trust me ;)",
+        "type": "text",
+        "read": false,
+        "own_message": true
+      },
+      {
+        "id": 8,
+        "content": "I know how important this file is to you. You can trust me ;) I know how important this file is to you. You can trust me ;) know how important this file is to you. You can trust me ;)",
+        "type": "text",
+        "read": false,
+        "own_message": false
+      },
+      {
+        "id": 9,
+        "type": "video",
+        "data": {
+          "cover": "https://bundui-images.netlify.app/extra/image4.jpg",
+          "duration": "2:42"
+        },
+        "read": false,
+        "own_message": false
+      },
+      {
+        "id": 12,
+        "type": "file",
+        "data": {
+          "file_name": "important_documents.pdf",
+          "path": "/files/important_documents.pdf",
+          "size": "50KB"
+        },
+        "read": false,
+        "own_message": true
+      },
+      {
+        "id": 12,
+        "type": "sound",
+        "data": {
+          "path": "/sound.mp3"
+        },
+        "read": false,
+        "own_message": true
+      },
+      {
+        "id": 13,
+        "type": "video",
+        "data": {
+          "cover": "https://bundui-images.netlify.app/extra/image1.jpg",
+          "duration": "5:42"
+        },
+        "read": false,
+        "own_message": true
+      },
+      {
+        "id": 14,
+        "type": "image",
+        "data": {
+          "images": [
+            "https://bundui-images.netlify.app/extra/image5.jpg",
+            "https://bundui-images.netlify.app/extra/image4.jpg",
+            "https://bundui-images.netlify.app/extra/image3.jpg",
+            "https://bundui-images.netlify.app/extra/image2.jpg",
+            "https://bundui-images.netlify.app/extra/image4.jpg",
+            "https://bundui-images.netlify.app/extra/image1.jpg"
+          ]
+        },
+        "read": false,
+        "own_message": true
+      }
+    ],
+    "user_id": 1,
+    "medias": [
+      {
+        "type": "image",
+        "path": "https://bundui-images.netlify.app/extra/image1.jpg"
+      },
+      {
+        "type": "pdf",
+        "path": "/path/file.pdf"
+      },
+      {
+        "type": "excel",
+        "path": "/path/file.excel"
+      },
+      {
+        "type": "file",
+        "path": "/path/file.txt"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "date": "40 minutes",
+    "last_message": "Sounds perfect! I've been wanting to try that place. See you there!",
+    "status": "read",
+    "is_archive": true,
+    "messages": [
+      {
+        "id": 1,
+        "content": "Sorry :( send you as soon as possible.",
+        "type": "text",
+        "read": true,
+        "own_message": true
+      },
+      {
+        "id": 2,
+        "content": "I know how important this file is to you. You can trust me ;) I know how important this file is to you. You can trust me ;) know how important this file is to you. You can trust me ;)",
+        "type": "text",
+        "read": true,
+        "own_message": false
+      },
+      {
+        "id": 3,
+        "content": "I know how important this file is to you. You can trust me ;)  me ;)",
+        "type": "text",
+        "read": false,
+        "own_message": true
+      },
+      {
+        "id": 4,
+        "type": "image",
+        "data": {
+          "images": ["https://bundui-images.netlify.app/extra/image4.jpg", "https://bundui-images.netlify.app/extra/image2.jpg"]
+        },
+        "read": false,
+        "own_message": true
+      }
+    ],
+    "user_id": 2
+  },
+  {
+    "id": 3,
+    "date": "Yesterday",
+    "last_message": "How about 7 PM at the new Italian place downtown?",
+    "status": "read",
+    "is_archive": true,
+    "messages": [
+      {
+        "id": 1,
+        "content": "Sorry :( send you as soon as possible.",
+        "type": "text",
+        "read": true,
+        "own_message": true
+      }
+    ],
+    "user_id": 3
+  },
+  {
+    "id": 4,
+    "date": "13 days",
+    "last_message": "Hey Bonnie, yes, definitely! What time should we meet?",
+    "status": "sent",
+    "messages": [
+      {
+        "id": 1,
+        "type": "image",
+        "data": {
+          "images": ["https://bundui-images.netlify.app/extra/image2.jpg", "https://bundui-images.netlify.app/extra/image1.jpg"]
+        },
+        "read": true,
+        "own_message": true
+      }
+    ],
+    "user_id": 4
+  },
+  {
+    "id": 5,
+    "date": "2 days",
+    "last_message": "No worries at all! I’ll grab a table and wait for you. Drive safe!",
+    "status": "forwarded",
+    "messages": [
+      {
+        "id": 1,
+        "content": "I know how important this file is to you. You can trust me ;)  me ;)",
+        "type": "text",
+        "read": true,
+        "own_message": true
+      }
+    ],
+    "user_id": 5
+  },
+  {
+    "id": 6,
+    "date": "Yesterday",
+    "last_message": "She just told me today.",
+    "status": "read",
+    "messages": [
+      {
+        "id": 1,
+        "content": "😂 🤣",
+        "type": "text",
+        "read": true,
+        "own_message": true
+      }
+    ],
+    "user_id": 6
+  },
+  {
+    "id": 7,
+    "date": "1 day",
+    "last_message": "See you in 5 minutes!",
+    "status": "sent",
+    "messages": [
+      {
+        "id": 1,
+        "content": "I know how important this file is to you. You can trust me ;)  me ;)",
+        "type": "text",
+        "read": true,
+        "own_message": true
+      }
+    ],
+    "user_id": 7
+  },
+  {
+    "id": 8,
+    "date": "3 hours",
+    "last_message": "If it takes long you can mail",
+    "status": "forwarded",
+    "messages": [
+      {
+        "id": 1,
+        "content": "I know how important this file is to you. You can trust me ;) I know how important this file is to you. You can trust me ;) know how important this file is to you. You can trust me ;)",
+        "type": "text",
+        "read": true,
+        "own_message": false
+      }
+    ],
+    "user_id": 8
+  },
+  {
+    "id": 9,
+    "date": "1 day",
+    "last_message": "Absolutely! It’s amazing to see her so happy and passionate about it.",
+    "status": "read",
+    "messages": [
+      {
+        "id": 1,
+        "content": "Sorry :( send you as soon as possible.",
+        "type": "text",
+        "read": true,
+        "own_message": true
+      },
+      {
+        "id": 2,
+        "content": "I know how important this file is to you. You can trust me ;) I know how important this file is to you. You can trust me ;) know how important this file is to you. You can trust me ;)",
+        "type": "text",
+        "read": true,
+        "own_message": false
+      },
+      {
+        "id": 3,
+        "content": "I know how important this file is to you. You can trust me ;)  me ;)",
+        "type": "text",
+        "read": false,
+        "own_message": true
+      },
+      {
+        "id": 4,
+        "type": "image",
+        "data": {
+          "images": ["https://bundui-images.netlify.app/extra/image4.jpg", "https://bundui-images.netlify.app/extra/image2.jpg"]
+        },
+        "read": false,
+        "own_message": true
+      }
+    ],
+    "user_id": 9
+  },
+  {
+    "id": 10,
+    "date": "1 day",
+    "last_message": "Yeah, she mentioned it last week.",
+    "status": "read",
+    "messages": [
+      {
+        "id": 1,
+        "type": "image",
+        "data": {
+          "images": ["https://bundui-images.netlify.app/extra/image4.jpg", "https://bundui-images.netlify.app/extra/image2.jpg"]
+        },
+        "read": true,
+        "own_message": true
+      }
+    ],
+    "user_id": 10
+  },
+  {
+    "id": 11,
+    "date": "Yesterday",
+    "last_message": "Thanks, I appreciate it! ",
+    "status": "sent",
+    "messages": [
+      {
+        "id": 1,
+        "content": "Sorry :( send you as soon as possible.",
+        "type": "text",
+        "read": true,
+        "own_message": true
+      },
+      {
+        "id": 2,
+        "content": "I know how important this file is to you. You can trust me ;) I know how important this file is to you. You can trust me ;) know how important this file is to you. You can trust me ;)",
+        "type": "text",
+        "read": true,
+        "own_message": false
+      },
+      {
+        "id": 3,
+        "content": "I know how important this file is to you. You can trust me ;)  me ;)",
+        "type": "text",
+        "read": false,
+        "own_message": true
+      },
+      {
+        "id": 4,
+        "type": "image",
+        "data": {
+          "images": ["https://bundui-images.netlify.app/extra/image2.jpg", "https://bundui-images.netlify.app/extra/image1.jpg"]
+        },
+        "read": false,
+        "own_message": true
+      }
+    ],
+    "user_id": 11
+  },
+  {
+    "id": 12,
+    "date": "1 hours",
+    "last_message": "Drive safe!",
+    "status": "read",
+    "messages": [
+      {
+        "id": 1,
+        "content": "Sorry :( send you as soon as possible.",
+        "type": "text",
+        "read": true,
+        "own_message": true
+      },
+      {
+        "id": 2,
+        "content": "I know how important this file is to you. You can trust me ;) I know how important this file is to you. You can trust me ;) know how important this file is to you. You can trust me ;)",
+        "type": "text",
+        "read": true,
+        "own_message": false
+      },
+      {
+        "id": 3,
+        "content": "I know how important this file is to you. You can trust me ;)  me ;)",
+        "type": "text",
+        "read": true,
+        "own_message": true
+      },
+      {
+        "id": 4,
+        "type": "image",
+        "data": {
+          "images": ["https://bundui-images.netlify.app/extra/image4.jpg", "https://bundui-images.netlify.app/extra/image2.jpg"]
+        },
+        "read": true,
+        "own_message": true
+      }
+    ],
+    "user_id": 12
+  },
+  {
+    "id": 13,
+    "date": "10 days",
+    "last_message": "I might be 10 minutes late. Sorry!",
+    "status": "read",
+    "messages": [
+      {
+        "id": 1,
+        "content": "Sorry :( send you as soon as possible.",
+        "type": "text",
+        "read": true,
+        "own_message": true
+      },
+      {
+        "id": 2,
+        "content": "I know how important this file is to you. You can trust me ;) I know how important this file is to you. You can trust me ;) know how important this file is to you. You can trust me ;)",
+        "type": "text",
+        "read": true,
+        "own_message": false
+      },
+      {
+        "id": 3,
+        "content": "I know how important this file is to you. You can trust me ;)  me ;)",
+        "type": "text",
+        "read": true,
+        "own_message": true
+      },
+      {
+        "id": 4,
+        "type": "image",
+        "data": {
+          "images": ["https://bundui-images.netlify.app/extra/image3.jpg", "https://bundui-images.netlify.app/extra/image1.jpg"]
+        },
+        "read": true,
+        "own_message": true
+      }
+    ],
+    "user_id": 13
+  }
+]

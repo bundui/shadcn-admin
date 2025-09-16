@@ -1,0 +1,146 @@
+[
+  {
+    "id": "1",
+    "name": "Oliver Thompson",
+    "phone": "+90-532-123-4567",
+    "totalOrders": 47,
+    "totalSpent": 285000,
+    "lastOrder": "March 19, 2024",
+    "isActive": true,
+    "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=32&h=32&fit=crop&crop=face"
+  },
+  {
+    "id": "2", 
+    "name": "Sophie Anderson",
+    "phone": "+90-533-234-5678",
+    "totalOrders": 156,
+    "totalSpent": 890000,
+    "lastOrder": "March 18, 2024",
+    "isActive": true,
+    "avatar": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=32&h=32&fit=crop&crop=face"
+  },
+  {
+    "id": "3",
+    "name": "James Mitchell",
+    "phone": "+90-535-345-6789",
+    "totalOrders": 89,
+    "totalSpent": 425000,
+    "lastOrder": "March 17, 2024",
+    "isActive": true,
+    "avatar": "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=32&h=32&fit=crop&crop=face"
+  },
+  {
+    "id": "4",
+    "name": "Emma Roberts",
+    "phone": "+90-536-456-7890",
+    "totalOrders": 234,
+    "totalSpent": 1250000,
+    "lastOrder": "March 16, 2024",
+    "isActive": true
+  },
+  {
+    "id": "5",
+    "name": "William Chen",
+    "phone": "+90-537-567-8901",
+    "totalOrders": 67,
+    "totalSpent": 378000,
+    "lastOrder": "March 15, 2024",
+    "isActive": true,
+    "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=32&h=32&fit=crop&crop=face"
+  },
+  {
+    "id": "6",
+    "name": "Isabella Martinez",
+    "phone": "+90-538-678-9012",
+    "totalOrders": 145,
+    "totalSpent": 567000,
+    "lastOrder": "March 14, 2024",
+    "isActive": true
+  },
+  {
+    "id": "7",
+    "name": "Alexander Davis",
+    "phone": "+90-539-789-0123",
+    "totalOrders": 92,
+    "totalSpent": 445000,
+    "lastOrder": "March 13, 2024",
+    "isActive": false,
+    "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=face"
+  },
+  {
+    "id": "8",
+    "name": "Charlotte Wilson",
+    "phone": "+90-542-890-1234",
+    "totalOrders": 178,
+    "totalSpent": 890000,
+    "lastOrder": "March 12, 2024",
+    "isActive": true
+  },
+  {
+    "id": "9",
+    "name": "Henry Taylor",
+    "phone": "+90-543-901-2345",
+    "totalOrders": 267,
+    "totalSpent": 1350000,
+    "lastOrder": "March 11, 2024",
+    "isActive": true,
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=32&h=32&fit=crop&crop=face"
+  },
+  {
+    "id": "10",
+    "name": "Victoria Brown",
+    "phone": "+90-544-012-3456",
+    "totalOrders": 123,
+    "totalSpent": 678000,
+    "lastOrder": "March 10, 2024",
+    "isActive": true
+  },
+  {
+    "id": "11",
+    "name": "Michael Johnson",
+    "phone": "+90-545-123-4567",
+    "totalOrders": 89,
+    "totalSpent": 445000,
+    "lastOrder": "March 9, 2024",
+    "isActive": true,
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=32&h=32&fit=crop&crop=face"
+  },
+  {
+    "id": "12",
+    "name": "Elizabeth Parker",
+    "phone": "+90-546-234-5678",
+    "totalOrders": 156,
+    "totalSpent": 780000,
+    "lastOrder": "March 8, 2024",
+    "isActive": true
+  },
+  {
+    "id": "13",
+    "name": "Daniel Smith",
+    "phone": "+90-547-345-6789",
+    "totalOrders": 198,
+    "totalSpent": 925000,
+    "lastOrder": "March 7, 2024",
+    "isActive": false,
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=32&h=32&fit=crop&crop=face"
+  },
+  {
+    "id": "14",
+    "name": "Sophia Williams",
+    "phone": "+90-548-456-7890",
+    "totalOrders": 245,
+    "totalSpent": 1180000,
+    "lastOrder": "March 6, 2024",
+    "isActive": true
+  },
+  {
+    "id": "15",
+    "name": "Benjamin Clarke",
+    "phone": "+90-549-567-8901",
+    "totalOrders": 167,
+    "totalSpent": 890000,
+    "lastOrder": "March 5, 2024",
+    "isActive": true,
+    "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=32&h=32&fit=crop&crop=face"
+  }
+]
