@@ -10,14 +10,14 @@ export function generateMeta({
   canonical: string;
 }): Metadata {
   return {
-    title: `${title} - Shadcn Admin`,
+    title: `${title} - Shadcn Admin Dashboard`,
     description: description,
     metadataBase: new URL(`${process.env.BASE_URL}`),
     alternates: {
       canonical
     },
     openGraph: {
-      images: [`${process.env.BASE_URL}/seo.png`]
+      images: [`${process.env.BASE_URL}/og-image.png`]
     }
   };
 }

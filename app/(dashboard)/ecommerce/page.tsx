@@ -32,7 +32,7 @@ export default function Page() {
     <div className="min-h-screen space-y-6 p-6">
       <Tabs defaultValue="account" className="w-full">
         <div className="flex justify-between">
-          <TabsList className="mb-4">
+          <TabsList>
             <TabsTrigger value="account">Overview</TabsTrigger>
             <TabsTrigger value="password">Reports</TabsTrigger>
           </TabsList>

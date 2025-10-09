@@ -15,7 +15,7 @@ bun dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 
-[![](https://raw.githubusercontent.com/shadcn-examples/shadcn-ui-dashboard/refs/heads/main/public/hero.png)](https://shadcnuidashboard.com/)
+[![](https://raw.githubusercontent.com/bundui/shadcn-admin/refs/heads/main/public/hero.png?token=GHSAT0AAAAAADHPR4AXLIX3AFYYFXIHICWG2GKPFRA)](https://shadcnuidashboard.com/)
 
 
 ## Deploy on Vercel

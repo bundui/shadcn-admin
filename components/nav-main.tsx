@@ -51,7 +51,7 @@ export function NavMain({ items }: { items: NavMainProps }) {
                           <DropdownMenuTrigger asChild>
                             <SidebarMenuItem key={l.title}>
                               <SidebarMenuButton tooltip={l.title} asChild>
-                                <Link href={l.url}>
+                                <Link href={l.url ?? "#"}>
                                   {l.icon && <l.icon />}
                                   <span>{l.title}</span>
                                 </Link>
@@ -97,7 +97,7 @@ export function NavMain({ items }: { items: NavMainProps }) {
                   ) : (
                     <SidebarMenuItem key={l.title}>
                       <SidebarMenuButton tooltip={l.title} asChild>
-                        <Link href={l.url}>
+                        <Link href={l.url ?? "#"}>
                           {l.icon && <l.icon />}
                           <span>{l.title}</span>
                         </Link>

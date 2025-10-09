@@ -1,0 +1,942 @@
+[
+  {
+    "name": "accordion",
+    "title": "Accordion",
+    "description": {
+      "base": "A vertically stacked set of interactive headings that each reveal a section of content.",
+      "meta": "A vertically stacked set of interactive headings that each reveal a section of content. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "category": "base",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      }
+    ],
+    "additional_urls": [
+      {
+        "name": "Docs",
+        "url": ""
+      },
+      {
+        "name": "Api Reference",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "name": "alert",
+    "title": "Alert",
+    "description": {
+      "base": "Displays a callout for user attention.",
+      "meta": "Displays a callout for user attention. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "category": "feedback",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Default"
+      },
+      {
+        "name":"02",
+        "title": "With Description"
+      },
+      {
+        "name":"03",
+        "title": "CTA Button"
+      },
+      {
+        "name":"04",
+        "title": "Dismiss"
+      },
+      {
+        "name":"05",
+        "title": "Colors"
+      }
+    ]
+  },
+  {
+    "name": "alert-dialog",
+    "title": "Alert Dialog",
+    "description": {
+      "base": "A modal dialog that interrupts the user with important content and expects a response.",
+      "meta": "A modal dialog that interrupts the user with important content and expects a response. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "category": "feedback",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      },
+      {
+        "name": "02",
+        "title": "With OTP Inputs"
+      }
+    ],
+    "additional_urls": [
+      {
+        "name": "Docs",
+        "url": ""
+      },
+      {
+        "name": "Api Reference",
+        "url": ""
+      }
+    ]
+  },
+  {
+    "name": "avatar",
+    "title": "Avatar",
+    "description": {
+      "base": "An image element with a fallback for representing the user.",
+      "meta": "An image element with a fallback for representing the user. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "additional_urls": [
+      {
+        "name": "Docs",
+        "url": ""
+      },
+      {
+        "name": "API Reference",
+        "url": ""
+      }
+    ],
+    "category": "data-display",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      },
+      {
+        "name":"02",
+        "title": "Avatar group"
+      }
+    ]
+  },
+  {
+    "name": "badge",
+    "title": "Badge",
+    "description": {
+      "base": "Displays a badge or a component that looks like a badge.",
+      "meta": "Displays a badge or a component that looks like a badge. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "category": "data-display",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      },
+      {
+        "name":"02",
+        "title": "Dot"
+      },
+      {
+        "name":"03",
+        "title": "Close Icon"
+      }
+    ]
+  },
+  {
+    "name": "breadcrumb",
+    "title": "Breadcrumb",
+    "description": {
+      "base": "Displays the path to the current resource using a hierarchy of links.",
+      "meta": "Displays the path to the current resource using a hierarchy of links. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "category": "navigation",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      },
+      {
+        "name":"02",
+        "title": "With Icon"
+      }
+    ]
+  },
+  {
+    "name": "buttons",
+    "title": "Buttons",
+    "description": {
+      "base": "Displays a button or a component that looks like a button.",
+      "meta": "Displays a button or a component that looks like a button. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "category": "base",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Variant"
+      },
+      {
+        "name": "02",
+        "title": "Size"
+      },
+      {
+        "name": "03",
+        "title": "Disabled"
+      },
+      {
+        "name": "04",
+        "title": "Icon"
+      },
+      {
+        "name": "05",
+        "title": "With Icon",
+        "description": "Using buttons together with icons."
+      },
+      {
+        "name": "06",
+        "title": "Loading"
+      },
+      {
+        "name": "07",
+        "title": "Shape"
+      }
+    ]
+  },
+  {
+    "name": "card",
+    "title": "Card",
+    "description": {
+      "base": "Displays a card with header, content, and footer.",
+      "meta": "Displays a card with header, content, and footer. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "category": "data-display",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      }
+    ]
+  },
+  {
+    "name": "carousel",
+    "title": "Carousel",
+    "description": {
+      "base": "A carousel with motion and swipe built using Embla.",
+      "meta": "A carousel with motion and swipe built using Embla. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "additional_urls": [
+      {
+        "name": "Docs",
+        "url": "https://www.embla-carousel.com/get-started/react"
+      },
+      {
+        "name": "Api Reference",
+        "url": "https://www.embla-carousel.com/api"
+      }
+    ],
+    "category": "data-display",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      },
+      {
+        "name":"02",
+        "title": "Multiple"
+      },
+      {
+        "name":"03",
+        "title": "Orientation"
+      },
+      {
+        "name":"04",
+        "title": "Autoplay"
+      }
+    ]
+  },
+  {
+    "name": "chart",
+    "title": "Chart",
+    "description": {
+      "base": "Beautiful charts. Built using Recharts. Copy and paste into your apps.",
+      "meta": "Beautiful charts. Built using Recharts. Copy and paste into your apps. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "additional_urls": [
+      {
+        "name": "Recharts",
+        "url": "https://recharts.org/"
+      },
+      {
+        "name": "Docs",
+        "url": "https://ui.shadcn.com/docs/components/chart"
+      }
+    ],
+    "category": "graph",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      }
+    ]
+  },
+  {
+    "name": "checkbox",
+    "title": "Checkbox",
+    "description": {
+      "base": "A control that allows the user to toggle between checked and not checked.",
+      "meta": "A control that allows the user to toggle between checked and not checked. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "additional_urls": [
+      {
+        "name": "Docs",
+        "url": ""
+      },
+      {
+        "name": "Api Reference",
+        "url": ""
+      }
+    ],
+    "category": "forms",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Default"
+      },
+      {
+        "name":"02",
+        "title": "Color"
+      }
+    ]
+  },
+  {
+    "name": "collapsible",
+    "title": "Collapsible",
+    "description": {
+      "base": "An interactive component which expands/collapses a panel.",
+      "meta": "An interactive component which expands/collapses a panel. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "additional_urls": [
+      {
+        "name": "Docs",
+        "url": ""
+      },
+      {
+        "name": "API Reference",
+        "url": ""
+      }
+    ],
+    "category": "data-display",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      }
+    ]
+  },
+  {
+    "name": "combobox",
+    "title": "Combobox",
+    "description": {
+      "base": "Autocomplete input and command palette with a list of suggestions.",
+      "meta": "Autocomplete input and command palette with a list of suggestions. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "note": "The Combobox is built using a composition of the <a href='/components/popover' class='underline'>Popover</a> and the <a href='/components/command' class='underline'>Command</a> components.",
+    "category": "forms",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      },
+      {
+        "name":"02",
+        "title": "Basic"
+      },
+      {
+        "name":"03",
+        "title": "Status"
+      }
+    ]
+  },
+  {
+    "name": "context-menu",
+    "title": "Context Menu",
+    "description": {
+      "base": "Displays a menu to the user — such as a set of actions or functions — triggered by a button.",
+      "meta": "Displays a menu to the user — such as a set of actions or functions — triggered by a button. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "additional_urls": [
+      {
+        "name": "Docs",
+        "url": ""
+      },
+      {
+        "name": "Api Reference",
+        "url": ""
+      }
+    ],
+    "category": "navigation",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      }
+    ]
+  },
+  {
+    "name": "data-table",
+    "title": "Data Table",
+    "description": {
+      "base": "Powerful table and datagrids built using TanStack Table.",
+      "meta": "Powerful table and datagrids built using TanStack Table. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "additional_urls": [
+      {
+        "name": "Docs",
+        "url": "https://tanstack.com/table/v8/docs/introduction"
+      }
+    ],
+    "category": "data-display",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Static"
+      },
+      {
+        "name":"02",
+        "title": "Tanstack table"
+      },
+      {
+        "name":"03",
+        "title": "Tanstack table with filter"
+      }
+    ]
+  },
+  {
+    "name": "date-picker",
+    "title": "Date Picker",
+    "description": {
+      "base": "A date picker component with range and presets.",
+      "meta": "A date picker component with range and presets. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "additional_urls": [
+      {
+        "name": "Docs",
+        "url": "https://react-day-picker.js.org/"
+      }
+    ],
+    "category": "data-display",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      },
+      {
+        "name": "02",
+        "title": "Basic"
+      }
+    ]
+  },
+  {
+    "name": "dialog",
+    "title": "Dialog",
+    "description": {
+      "base": "A modal dialog that interrupts the user with important content and expects a response.",
+      "meta": "A modal dialog that interrupts the user with important content and expects a response. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "additional_urls": [
+      {
+        "name": "Docs",
+        "url": ""
+      },
+      {
+        "name": "Api Reference",
+        "url": ""
+      }
+    ],
+    "category": "feedback",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      },
+      {
+        "name":"02",
+        "title": "Share Link"
+      }
+    ]
+  },
+  {
+    "name": "drawer",
+    "title": "Drawer",
+    "description": {
+      "base": "A drawer component for React.",
+      "meta": "A drawer component for React. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "additional_urls": [
+      {
+        "name": "Docs",
+        "url": "https://vaul.emilkowal.ski/getting-started"
+      }
+    ],
+    "category": "feedback",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      }
+    ]
+  },
+  {
+    "name": "dropdown-menu",
+    "title": "Dropdown Menu",
+    "description": {
+      "base": "Displays a menu to the user — such as a set of actions or functions — triggered by a button.",
+      "meta": "Displays a menu to the user — such as a set of actions or functions — triggered by a button. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "additional_urls": [
+      {
+        "name": "Docs",
+        "url": ""
+      },
+      {
+        "name": "Api Reference",
+        "url": ""
+      }
+    ],
+    "category": "navigation",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      }
+    ]
+  },
+  {
+    "name": "hover-card",
+    "title": "Hover Card",
+    "description": {
+      "base": "For sighted users to preview content available behind a link.",
+      "meta": "For sighted users to preview content available behind a link. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "additional_urls": [
+      {
+        "name": "Docs",
+        "url": ""
+      },
+      {
+        "name": "API Reference",
+        "url": ""
+      }
+    ],
+    "category": "feedback",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      }
+    ]
+  },
+  {
+    "name": "input",
+    "title": "Input",
+    "description": {
+      "base": "Displays a form input field or a component that looks like an input field.",
+      "meta": "Displays a form input field or a component that looks like an input field. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "category": "forms",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      },
+      {
+        "name":"02",
+        "title": "With Label"
+      },
+      {
+        "name":"03",
+        "title": "With Description"
+      },
+      {
+        "name":"04",
+        "title": "With Validation"
+      },
+      {
+        "name":"05",
+        "title": "File"
+      },
+      {
+        "name":"06",
+        "title": "Character Limit"
+      },
+      {
+        "name":"07",
+        "title": "OTP"
+      },
+      {
+        "name":"08",
+        "title": "With Icon"
+      }
+    ]
+  },
+  {
+    "name": "input-otp",
+    "title": "Input Otp",
+    "description": {
+      "base": "Accessible one-time password component with copy paste functionality.",
+      "meta": "Accessible one-time password component with copy paste functionality. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "additional_urls": [
+      {
+        "name": "Docs",
+        "url": "https://input-otp.rodz.dev/"
+      }
+    ],
+    "category": "forms",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      }
+    ]
+  },
+  {
+    "name": "menubar",
+    "title": "Menubar",
+    "description": {
+      "base": "A visually persistent menu common in desktop applications that provides quick access to a consistent set of commands.",
+      "meta": "A visually persistent menu common in desktop applications that provides quick access to a consistent set of commands. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "additional_urls": [
+      {
+        "name": "Docs",
+        "url": ""
+      },
+      {
+        "name": "Api Reference",
+        "url": ""
+      }
+    ],
+    "category": "navigation",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      }
+    ]
+  },
+  {
+    "name": "pagination",
+    "title": "Pagination",
+    "description": {
+      "base": "Pagination with page navigation, next and previous links.",
+      "meta": "Pagination with page navigation, next and previous links. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "category": "navigation",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      },
+      {
+        "name":"02",
+        "title": "Simple"
+      },
+      {
+        "name":"03",
+        "title": "Advanced"
+      }
+    ]
+  },
+  {
+    "name": "popover",
+    "title": "Popover",
+    "description": {
+      "base": "Displays rich content in a portal, triggered by a button.",
+      "meta": "Displays rich content in a portal, triggered by a button. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "additional_urls": [
+      {
+        "name": "Docs",
+        "url": ""
+      },
+      {
+        "name": "Api Reference",
+        "url": ""
+      }
+    ],
+    "category": "data-display",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      }
+    ]
+  },
+  {
+    "name": "progress",
+    "title": "Progress",
+    "description": {
+      "base": "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+      "meta": "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "additional_urls": [
+      {
+        "name": "Docs",
+        "url": ""
+      },
+      {
+        "name": "API Reference",
+        "url": ""
+      }
+    ],
+    "category": "feedback",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      },
+      {
+        "name": "02",
+        "title": "Colors"
+      },
+      {
+        "name": "03",
+        "title": "With Label"
+      }
+    ]
+  },
+  {
+    "name": "radio-group",
+    "title": "Radio Group",
+    "description": {
+      "base": "A set of checkable buttons—known as radio buttons—where no more than one of the buttons can be checked at a time.",
+      "meta": "A set of checkable buttons—known as radio buttons—where no more than one of the buttons can be checked at a time. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "additional_urls": [
+      {
+        "name": "Docs",
+        "url": ""
+      },
+      {
+        "name": "API Reference",
+        "url": ""
+      }
+    ],
+    "category": "forms",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      },
+      {
+        "name":"02",
+        "title": "Customize"
+      },
+      {
+        "name":"03",
+        "title": "Colored"
+      }
+    ]
+  },
+  {
+    "name": "select",
+    "title": "Select",
+    "description": {
+      "base": "Displays a list of options for the user to pick from—triggered by a button.",
+      "meta": "Displays a list of options for the user to pick from—triggered by a button. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "additional_urls": [
+      {
+        "name": "Docs",
+        "url": ""
+      },
+      {
+        "name": "API Reference",
+        "url": ""
+      }
+    ],
+    "category": "forms",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      }
+    ]
+  },
+  {
+    "name": "sheet",
+    "title": "Sheet",
+    "description": {
+      "base": "Extends the Dialog component to display content that complements the main content of the screen.",
+      "meta": "Extends the Dialog component to display content that complements the main content of the screen. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "reference_name": "dialog",
+    "additional_urls": [
+      {
+        "name": "Docs",
+        "url": ""
+      },
+      {
+        "name": "Api Reference",
+        "url": ""
+      }
+    ],
+    "category": "feedback",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      }
+    ]
+  },
+  {
+    "name": "skeleton",
+    "title": "Skeleton",
+    "description": {
+      "base": "Use to show a placeholder while content is loading.",
+      "meta": "Use to show a placeholder while content is loading. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "category": "feedback",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      },
+      {
+        "name": "02",
+        "title": "Card"
+      },
+      {
+        "name": "03",
+        "title": "List"
+      }
+    ]
+  },
+  {
+    "name": "slider",
+    "title": "Slider",
+    "description": {
+      "base": "An input where the user selects a value from within a given range.",
+      "meta": "An input where the user selects a value from within a given range. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "additional_urls": [
+      {
+        "name": "Docs",
+        "url": ""
+      },
+      {
+        "name": "API Reference",
+        "url": ""
+      }
+    ],
+    "category": "forms",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      }
+    ]
+  },
+  {
+    "name": "switch",
+    "title": "Switch",
+    "description": {
+      "base": "A control that allows the user to toggle between checked and not checked.",
+      "meta": "A control that allows the user to toggle between checked and not checked. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "additional_urls": [
+      {
+        "name": "Docs",
+        "url": ""
+      },
+      {
+        "name": "API Reference",
+        "url": ""
+      }
+    ],
+    "category": "forms",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      }
+    ]
+  },
+  {
+    "name": "tabs",
+    "title": "Tabs",
+    "description": {
+      "base": "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+      "meta": "A set of layered sections of content—known as tab panels—that are displayed one at a time. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "additional_urls": [
+      {
+        "name": "Docs",
+        "url": ""
+      },
+      {
+        "name": "Api Reference",
+        "url": ""
+      }
+    ],
+    "category": "navigation",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      }
+    ]
+  },
+  {
+    "name": "toggle-group",
+    "title": "Toggle-group",
+    "description": {
+      "base": "A set of two-state buttons that can be toggled on or off.",
+      "meta": "A set of two-state buttons that can be toggled on or off. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "additional_urls": [
+      {
+        "name": "Docs",
+        "url": ""
+      },
+      {
+        "name": "Api Reference",
+        "url": ""
+      }
+    ],
+    "category": "navigation",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      }
+    ]
+  },
+  {
+    "name": "tooltip",
+    "title": "Tooltip",
+    "description": {
+      "base": "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+      "meta": "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "additional_urls": [
+      {
+        "name": "Docs",
+        "url": ""
+      },
+      {
+        "name": "Api Reference",
+        "url": ""
+      }
+    ],
+    "category": "feedback",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      },
+      {
+        "name": "02",
+        "title": "Placement"
+      },
+      {
+        "name": "03",
+        "title": "Customize"
+      }
+    ]
+  }
+]

@@ -16,6 +16,7 @@ import {
 
 import Logo from "@/components/layout/logo";
 import { sidebarData } from "@/@data/sidebar";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
@@ -30,7 +31,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
-        <NavMain items={sidebarData.navMain} />
+        <ScrollArea className="h-full">
+          <NavMain items={sidebarData.navMain} />
+        </ScrollArea>
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={sidebarData.user} />

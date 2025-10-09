@@ -11,7 +11,9 @@ export default async function DashboardLayout({
   children: React.ReactNode;
 }>) {
   const cookieStore = await cookies();
-  const defaultOpen = cookieStore.get("sidebar_state")?.value === "true";
+  const defaultOpen =
+    cookieStore.get("sidebar_state")?.value === "true" ||
+    cookieStore.get("sidebar_state") === undefined;
 
   return (
     <SidebarProvider
@@ -22,7 +24,7 @@ export default async function DashboardLayout({
           "--header-height": "calc(var(--spacing) * 12)"
         } as React.CSSProperties
       }>
-      <AppSidebar variant="sidebar" />
+      <AppSidebar variant="inset" />
       <SidebarInset>
         <SiteHeader />
         <div className="flex flex-1 flex-col">

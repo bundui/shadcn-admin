@@ -14,6 +14,7 @@ import {
   SquareKanban,
   UserRoundSearch
 } from "lucide-react";
+import data from "@/config/nav.json";
 
 export const sidebarData = {
   user: {
@@ -27,7 +28,6 @@ export const sidebarData = {
       items: [
         {
           title: "Ecommerce",
-          url: "/ecommerce",
           icon: ShoppingBag,
           items: [
             {
@@ -138,9 +138,73 @@ export const sidebarData = {
           icon: ShieldAlert
         }
       ]
+    },
+    {
+      title: "Components",
+      items: [
+        {
+          title: "Base",
+          icon: ShoppingBag,
+          items: data
+            .filter((z) => z.category === "base")
+            .map((a) => ({
+              title: a.title,
+              url: `/components/${a.name}`
+            }))
+        },
+        {
+          title: "Feedback",
+          icon: ShoppingBag,
+          items: data
+            .filter((z) => z.category === "feedback")
+            .map((a) => ({
+              title: a.title,
+              url: `/components/${a.name}`
+            }))
+        },
+        {
+          title: "Forms",
+          icon: UserRoundSearch,
+          items: data
+            .filter((z) => z.category === "forms")
+            .map((a) => ({
+              title: a.title,
+              url: `/components/${a.name}`
+            }))
+        },
+        {
+          title: "Data Display",
+          icon: UserRoundSearch,
+          items: data
+            .filter((z) => z.category === "data-display")
+            .map((a) => ({
+              title: a.title,
+              url: `/components/${a.name}`
+            }))
+        },
+        {
+          title: "Navigation",
+          icon: UserRoundSearch,
+          items: data
+            .filter((z) => z.category === "navigation")
+            .map((a) => ({
+              title: a.title,
+              url: `/components/${a.name}`
+            }))
+        },
+        {
+          title: "Graph",
+          icon: UserRoundSearch,
+          items: data
+            .filter((z) => z.category === "graph")
+            .map((a) => ({
+              title: a.title,
+              url: `/components/${a.name}`
+            }))
+        }
+      ]
     }
   ]
 };
 
-export type SidebarNavMain = (typeof sidebarData.navMain)[number];
 export type SidebarNavMainItem = (typeof sidebarData.navMain)[0]["items"][number];

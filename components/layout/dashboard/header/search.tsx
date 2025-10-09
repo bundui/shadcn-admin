@@ -41,7 +41,7 @@ export default function Search() {
       <CommandItem
         onSelect={() => {
           setOpen(false);
-          router.push(item.url);
+          if (item.url) router.push(item.url);
         }}>
         {LucideIcon && <LucideIcon className="me-2 h-4! w-4!" />}
         <span>{item.title}</span>
