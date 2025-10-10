@@ -196,6 +196,67 @@
     ]
   },
   {
+    "name": "button-group",
+    "title": "Button Group",
+    "description": {
+      "base": "A container that groups related buttons together with consistent styling.",
+      "meta": "A container that groups related buttons together with consistent styling. Built with Shadcn UI, Radix UI, Tailwind CSS, Next.js and React. Typescript included."
+    },
+    "additional_urls": [
+      {
+        "name": "API Reference",
+        "url": "https://ui.shadcn.com/docs/components/button-group#api-reference"
+      }
+    ],
+    "category": "base",
+    "examples": [
+      {
+        "name": "01",
+        "title": "Basic"
+      },
+      {
+        "name": "02",
+        "title": "Orientation"
+      },
+      {
+        "name": "03",
+        "title": "Size"
+      },
+      {
+        "name": "04",
+        "title": "Nested"
+      },
+      {
+        "name": "05",
+        "title": "Separator"
+      },
+      {
+        "name": "06",
+        "title": "Split"
+      },
+      {
+        "name": "07",
+        "title": "Input"
+      },
+      {
+        "name": "08",
+        "title": "Input Group"
+      },
+      {
+        "name": "09",
+        "title": "Dropdown Menu"
+      },
+      {
+        "name": "10",
+        "title": "Select"
+      },
+      {
+        "name": "11",
+        "title": "Popover"
+      }
+    ]
+  },
+  {
     "name": "card",
     "title": "Card",
     "description": {

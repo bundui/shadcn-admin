@@ -120,7 +120,7 @@ export default function ChatApp() {
   const [showProfile, setShowProfile] = useState(true);
 
   return (
-    <div className="flex h-screen bg-gray-50">
+    <div className="flex h-screen">
       <ConversationList
         conversations={conversations}
         selectedConversation={selectedConversation}

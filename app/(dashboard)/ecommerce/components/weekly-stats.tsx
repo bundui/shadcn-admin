@@ -6,7 +6,7 @@ export default function WeeklyStats() {
   return (
     <Card>
       <CardHeader className="flex flex-row items-center justify-between">
-        <CardTitle className="text-lg font-semibold">Weekly Stats</CardTitle>
+        <CardTitle>Weekly Stats</CardTitle>
         <Button variant="ghost" size="sm">
           <MoreHorizontal className="h-4 w-4" />
         </Button>

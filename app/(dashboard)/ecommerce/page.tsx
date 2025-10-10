@@ -63,11 +63,12 @@ export default function Page() {
             <BestSelling />
           </div>
 
-          <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-            <TopSellingStores />
-            <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-              <SalesByCountries />
+          <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
+            <div className="col-span-1">
               <RecentReviews />
+            </div>
+            <div className="col-span-2">
+              <TopSellingStores />
             </div>
           </div>
         </TabsContent>

@@ -1,6 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import {
   Home,
@@ -102,7 +102,7 @@ export default function Page() {
               <div className="flex-1">
                 <Input
                   placeholder="What's happening?"
-                  className="border-none p-0 text-xl placeholder:text-gray-500 focus-visible:ring-0"
+                  className="placeholder:text-muted-foreground border-none p-0 text-xl focus-visible:ring-0"
                 />
                 <div className="mt-4 flex items-center justify-between">
                   <div className="flex space-x-4">
@@ -137,9 +137,9 @@ export default function Page() {
                 <div className="flex-1">
                   <div className="flex items-center space-x-2">
                     <span className="font-semibold">Moyo Shiro</span>
-                    <span className="text-gray-500">@moyo</span>
-                    <span className="text-gray-500">·</span>
-                    <span className="text-gray-500">09:00 AM</span>
+                    <span className="text-muted-foreground">@moyo</span>
+                    <span className="text-muted-foreground">·</span>
+                    <span className="text-muted-foreground">09:00 AM</span>
                     <Button variant="ghost" size="sm" className="ml-auto">
                       <MoreHorizontal className="h-4 w-4" />
                     </Button>
@@ -149,7 +149,7 @@ export default function Page() {
                     of creative, sleek, and interactive portfolio designs that inspired me. Which
                     one&#39;s your favorite? #WebDesign #PortfolioInspiration
                   </p>
-                  <div className="mt-3 flex items-center space-x-6 text-gray-500">
+                  <div className="text-muted-foreground mt-3 flex items-center space-x-6">
                     <Button
                       variant="ghost"
                       size="sm"
@@ -189,9 +189,9 @@ export default function Page() {
                 <div className="flex-1">
                   <div className="flex items-center space-x-2">
                     <span className="font-semibold">Sophia</span>
-                    <span className="text-gray-500">@sophia</span>
-                    <span className="text-gray-500">·</span>
-                    <span className="text-gray-500">10:12 AM</span>
+                    <span className="text-muted-foreground">@sophia</span>
+                    <span className="text-muted-foreground">·</span>
+                    <span className="text-muted-foreground">10:12 AM</span>
                     <Button variant="ghost" size="sm" className="ml-auto">
                       <MoreHorizontal className="h-4 w-4" />
                     </Button>
@@ -209,7 +209,7 @@ export default function Page() {
                       className="w-full object-cover"
                     />
                   </div>
-                  <div className="mt-3 flex items-center space-x-6 text-gray-500">
+                  <div className="text-muted-foreground mt-3 flex items-center space-x-6">
                     <Button
                       variant="ghost"
                       size="sm"
@@ -245,8 +245,10 @@ export default function Page() {
         <div className="w-80 space-y-6 p-4">
           {/* Who to Follow */}
           <Card>
-            <CardContent className="p-4">
-              <h3 className="mb-4 text-lg font-bold">Who to follow</h3>
+            <CardHeader>
+              <CardTitle>Who to follow</CardTitle>
+            </CardHeader>
+            <CardContent>
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
@@ -256,7 +258,7 @@ export default function Page() {
                     </Avatar>
                     <div>
                       <p className="text-sm font-semibold">George</p>
-                      <p className="text-sm text-gray-500">@georgeSZ</p>
+                      <p className="text-muted-foreground text-sm">@georgeSZ</p>
                       <p className="text-muted-foreground mt-1 text-xs">
                         I design digital products and ventures.
                       </p>
@@ -275,7 +277,7 @@ export default function Page() {
                     </Avatar>
                     <div>
                       <p className="text-sm font-semibold">Nettie Schuster</p>
-                      <p className="text-sm text-gray-500">@Precious3</p>
+                      <p className="text-muted-foreground text-sm">@Precious3</p>
                       <p className="text-muted-foreground mt-1 text-xs">
                         The No Code SaaS Guy. Building a portfolio of software companies.
                       </p>
@@ -294,7 +296,7 @@ export default function Page() {
                     </Avatar>
                     <div>
                       <p className="text-sm font-semibold">Mrs. Lola Rohan</p>
-                      <p className="text-sm text-gray-500">@collin_marks</p>
+                      <p className="text-muted-foreground text-sm">@collin_marks</p>
                       <p className="text-muted-foreground mt-1 text-xs">
                         I design digital products and ventures.
                       </p>
@@ -310,24 +312,26 @@ export default function Page() {
 
           {/* Trending Topics */}
           <Card>
-            <CardContent className="p-4">
-              <h3 className="mb-4 text-lg font-bold">Trending Topics</h3>
+            <CardHeader>
+              <CardTitle>Trending Topics</CardTitle>
+            </CardHeader>
+            <CardContent>
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="font-medium text-blue-600">#TechInnovation</span>
-                  <span className="text-sm text-gray-500">5.2K posts</span>
+                  <span className="text-muted-foreground text-sm">5.2K posts</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="font-medium text-blue-600">#ArtificialIntelligence</span>
-                  <span className="text-sm text-gray-500">12K posts</span>
+                  <span className="text-muted-foreground text-sm">12K posts</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="font-medium text-blue-600">#ClimateAction</span>
-                  <span className="text-sm text-gray-500">8.7K posts</span>
+                  <span className="text-muted-foreground text-sm">8.7K posts</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="font-medium text-blue-600">#SpaceExploration</span>
-                  <span className="text-sm text-gray-500">3.9K posts</span>
+                  <span className="text-muted-foreground text-sm">3.9K posts</span>
                 </div>
               </div>
             </CardContent>

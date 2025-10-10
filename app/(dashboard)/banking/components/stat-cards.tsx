@@ -4,7 +4,7 @@ import { Activity, CreditCard, DollarSign, TrendingDown, TrendingUp, Users } fro
 export default function StatCards() {
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-      <Card>
+      <Card className="p-0">
         <CardContent>
           <div className="flex items-center justify-between">
             <div>
@@ -22,7 +22,7 @@ export default function StatCards() {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="p-0">
         <CardContent>
           <div className="flex items-center justify-between">
             <div>
@@ -40,7 +40,7 @@ export default function StatCards() {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="p-0">
         <CardContent>
           <div className="flex items-center justify-between">
             <div>
@@ -58,7 +58,7 @@ export default function StatCards() {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="p-0">
         <CardContent>
           <div className="flex items-center justify-between">
             <div>

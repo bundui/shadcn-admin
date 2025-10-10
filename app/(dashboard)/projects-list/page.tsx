@@ -1,9 +1,9 @@
 import { Metadata } from "next";
-import { Settings, Plus } from "lucide-react";
+import { Plus } from "lucide-react";
 import { generateMeta } from "@/lib/generate-meta";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Progress } from "@/components/ui/progress";
@@ -23,49 +23,33 @@ export default function Page() {
   return (
     <div className="min-h-screen p-6">
       <div className="mx-auto max-w-7xl">
-        {/* Header */}
-        <div className="mb-8 flex items-center justify-between">
-          <div>
-            <h1 className="text-2xl font-bold text-gray-900">Projects Board</h1>
-            <p className="text-muted-foreground mt-1">List of your ongoing projects</p>
+        <header className="mb-8 flex items-center justify-between">
+          <div className="space-y-2">
+            <h1 className="text-2xl font-bold">Projects Board</h1>
+            <p className="text-muted-foreground text-sm">List of your ongoing projects</p>
           </div>
           <Button>
             <Plus />
             New Project
           </Button>
-        </div>
+        </header>
 
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-4">
           {projects.map((project) => (
             <Card key={project.id}>
+              <CardHeader>
+                <CardTitle>{project.title}</CardTitle>
+                <CardDescription>{project.subtitle}</CardDescription>
+              </CardHeader>
               <CardContent>
-                {/* Settings Icon */}
-                <Button variant="ghost" size="sm" className="absolute top-4 right-4 h-auto p-1">
-                  <Settings className="h-4 w-4" />
-                </Button>
-
                 {/* Date */}
-                <div className="mb-4 text-sm opacity-90">{project.date}</div>
-
-                {/* Project Title */}
-                <div className="mb-6">
-                  <h3 className="mb-1 truncate text-lg leading-tight font-semibold">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm opacity-90">{project.subtitle}</p>
-                </div>
+                <div className="text-muted-foreground mb-4 text-sm">{project.date}</div>
 
                 {/* Progress Section */}
                 <div className="mb-6">
                   <div className="mb-2 flex items-center justify-between">
                     <span className="text-sm opacity-90">Progress</span>
                     <span className="text-sm font-semibold">{project.progress}%</span>
-                  </div>
-                  <div className="h-2 w-full rounded-full bg-white/30">
-                    <div
-                      className="h-2 rounded-full transition-all duration-300"
-                      style={{ width: `${project.progress}%` }}
-                    />
                   </div>
                   <Progress value={project.progress} indicatorClassName={project.progressColor} />
                 </div>

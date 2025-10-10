@@ -1,5 +1,5 @@
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Card, CardAction, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardAction, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Star } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -52,7 +52,7 @@ export default function RecentReviews() {
 
   return (
     <Card>
-      <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-4">
+      <CardHeader className="flex flex-row items-center justify-between">
         <CardTitle>Recent Reviews</CardTitle>
         <CardAction>
           <Button variant="link" asChild>
@@ -60,24 +60,26 @@ export default function RecentReviews() {
           </Button>
         </CardAction>
       </CardHeader>
-      <div className="divide-y">
-        {reviews.map((review, i) => (
-          <Link href="#" key={i} className="hover:bg-muted group flex gap-3 p-4">
-            <Avatar className="bg-yellow-400">
-              <AvatarFallback className="bg-yellow-400 font-medium text-white">
-                {review.avatar}
-              </AvatarFallback>
-            </Avatar>
-            <div className="flex-1 space-y-2">
-              <div className="flex flex-col gap-1">
-                <h4 className="text-sm font-medium">{review.name}</h4>
-                {renderStars(review.rating)}
+      <CardContent className="p-0">
+        <div className="divide-y">
+          {reviews.map((review, i) => (
+            <Link href="#" key={i} className="hover:bg-muted group flex gap-4 p-4">
+              <Avatar className="bg-yellow-400">
+                <AvatarFallback className="bg-yellow-400 font-medium text-white">
+                  {review.avatar}
+                </AvatarFallback>
+              </Avatar>
+              <div className="flex-1 space-y-1">
+                <div className="flex justify-between gap-1">
+                  <h4 className="text-sm font-medium">{review.name}</h4>
+                  {renderStars(review.rating)}
+                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed">{review.comment}</p>
               </div>
-              <p className="text-muted-foreground text-sm leading-relaxed">{review.comment}</p>
-            </div>
-          </Link>
-        ))}
-      </div>
+            </Link>
+          ))}
+        </div>
+      </CardContent>
     </Card>
   );
 }

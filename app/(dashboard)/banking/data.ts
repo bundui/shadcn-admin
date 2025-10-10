@@ -50,9 +50,27 @@ export const transactions = [
 ];
 
 export const contacts = [
-  { id: 1, name: "KG", avatar: "/avatars/07.jpeg", initials: "KG" },
-  { id: 2, name: "SS", avatar: "/avatars/07.jpeg", initials: "SS" },
-  { id: 3, name: "J", avatar: "/avatars/07.jpeg", initials: "J" },
+  {
+    id: 1,
+    name: "KG",
+    avatar:
+      "https://plus.unsplash.com/premium_photo-1678197937465-bdbc4ed95815?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1287",
+    initials: "KG"
+  },
+  {
+    id: 2,
+    name: "SS",
+    avatar:
+      "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1287",
+    initials: "SS"
+  },
+  {
+    id: 3,
+    name: "J",
+    avatar:
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1288",
+    initials: "J"
+  },
   { id: 4, name: "LT", avatar: "/avatars/07.jpeg", initials: "LT" }
 ];
 

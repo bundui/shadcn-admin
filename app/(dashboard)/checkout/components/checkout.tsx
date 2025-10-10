@@ -157,12 +157,12 @@ export default function CheckoutPage() {
                 ? "border-green-500 bg-green-500 text-white"
                 : currentStep === step.id
                   ? "border-blue-500 bg-blue-500 text-white"
-                  : "border-gray-300 bg-gray-100 text-gray-500"
+                  : "text-muted-foreground border-gray-300 bg-gray-100"
             }`}>
             <step.icon className="h-5 w-5" />
           </div>
           <span
-            className={`ml-2 text-sm font-medium ${currentStep >= step.id ? "text-gray-900" : "text-gray-500"}`}>
+            className={`ml-2 text-sm font-medium ${currentStep >= step.id ? "text-muted-foreground" : "text-muted-foreground"}`}>
             {step.name}
           </span>
           {index < steps.length - 1 && (
@@ -182,7 +182,7 @@ export default function CheckoutPage() {
           <div className="mb-6 flex items-center justify-between">
             <div>
               <h1 className="text-2xl font-bold">Order Summary</h1>
-              <p className="text-muted-foreground">Review your items before checkout</p>
+              <p className="text-muted-foreground text-sm">Review your items before checkout</p>
             </div>
             <Button variant="outline" className="flex items-center gap-2 bg-transparent">
               <ShoppingCart className="h-4 w-4" />
@@ -192,8 +192,8 @@ export default function CheckoutPage() {
 
           <div className="space-y-4">
             {orderItems.map((item) => (
-              <Card key={item.id}>
-                <CardContent className="flex items-center gap-4">
+              <Card key={item.id} className="p-0">
+                <CardContent className="flex gap-4">
                   <Image
                     src={item.image || "/avatars/08.jpeg"}
                     alt={item.name}
@@ -261,7 +261,7 @@ export default function CheckoutPage() {
       <div className="mt-8 flex justify-end">
         <Button onClick={handleNext} className="flex items-center gap-2">
           Shipping Info
-          <ChevronLeft className="h-4 w-4 rotate-180" />
+          <ChevronLeft className="rotate-180" />
         </Button>
       </div>
     </div>
@@ -274,7 +274,9 @@ export default function CheckoutPage() {
           <div className="mb-6 flex items-center justify-between">
             <div>
               <h1 className="text-2xl font-bold">Shipping Info</h1>
-              <p className="text-muted-foreground">Enter and confirm your delivery address</p>
+              <p className="text-muted-foreground text-sm">
+                Enter and confirm your delivery address
+              </p>
             </div>
             <Button variant="outline" className="flex items-center gap-2 bg-transparent">
               <User className="h-4 w-4" />
@@ -286,7 +288,7 @@ export default function CheckoutPage() {
             {addresses.map((address) => (
               <Card
                 key={address.id}
-                className={`cursor-pointer transition-colors ${
+                className={`cursor-pointer p-0 transition-colors ${
                   selectedAddress === address.id ? "ring-2 ring-blue-500" : ""
                 }`}
                 onClick={() => setSelectedAddress(address.id)}>
@@ -402,7 +404,7 @@ export default function CheckoutPage() {
             {paymentMethods.map((payment) => (
               <Card
                 key={payment.id}
-                className={`cursor-pointer transition-colors ${
+                className={`cursor-pointer p-0 transition-colors ${
                   selectedPayment === payment.id ? "ring-2 ring-blue-500" : ""
                 }`}
                 onClick={() => setSelectedPayment(payment.id)}>
@@ -520,7 +522,7 @@ export default function CheckoutPage() {
   const renderOrderPlaced = () => (
     <div className="px-4">
       <div className="grid gap-8 lg:grid-cols-3">
-        <div className="lg:col-span-2">
+        <div className="space-y-4 lg:col-span-2">
           <div className="mb-6 flex items-center justify-between">
             <div>
               <h1 className="text-2xl font-bold">Order Placed</h1>
@@ -532,7 +534,7 @@ export default function CheckoutPage() {
             </div>
           </div>
 
-          <Card className="mb-6">
+          <Card className="p-0">
             <CardContent>
               <div className="grid grid-cols-5 gap-4 text-sm">
                 <div>
@@ -559,9 +561,9 @@ export default function CheckoutPage() {
             </CardContent>
           </Card>
 
-          <div className="mb-8 space-y-4">
+          <div className="space-y-4">
             {orderItems.map((item) => (
-              <Card key={item.id}>
+              <Card key={item.id} className="p-0">
                 <CardContent className="flex items-center gap-4">
                   <Image
                     src={item.image || "/avatars/08.jpeg"}

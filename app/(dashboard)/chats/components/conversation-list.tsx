@@ -28,12 +28,12 @@ export function ConversationList({
   onSelectConversation
 }: ConversationListProps) {
   return (
-    <div className="flex w-80 flex-col border-r border-gray-200 bg-white">
-      <div className="border-b border-gray-200 p-4">
-        <h1 className="mb-4 text-xl font-semibold text-gray-900">Messages</h1>
+    <div className="flex w-80 flex-col border-r">
+      <div className="border-b p-4">
+        <h1 className="mb-4 text-xl font-semibold">Messages</h1>
         <div className="relative">
-          <Search className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 transform text-gray-400" />
-          <Input placeholder="Search messages..." className="border-gray-200 bg-gray-50 pl-10" />
+          <Search className="text-muted-foreground absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 transform" />
+          <Input placeholder="Search messages..." className="bg-muted pl-10" />
         </div>
       </div>
 
@@ -42,9 +42,9 @@ export function ConversationList({
           <div
             key={conversation.id}
             onClick={() => onSelectConversation(conversation)}
-            className={`cursor-pointer border-b border-gray-100 p-4 transition-colors hover:bg-gray-50 ${
+            className={`hover:bg-muted cursor-pointer border-b p-4 transition-colors ${
               selectedConversation.id === conversation.id
-                ? "border-l-4 border-l-blue-500 bg-blue-50"
+                ? "bg-muted border-l-4 border-l-blue-500"
                 : ""
             }`}>
             <div className="flex items-center space-x-3">
@@ -59,16 +59,14 @@ export function ConversationList({
                   </AvatarFallback>
                 </Avatar>
                 {conversation.isActive && (
-                  <div className="absolute right-0 bottom-0 h-3 w-3 rounded-full border-2 border-white bg-green-500"></div>
+                  <div className="absolute right-0 bottom-0 h-3 w-3 rounded-full border-2 bg-green-500"></div>
                 )}
               </div>
 
               <div className="min-w-0 flex-1">
                 <div className="flex items-center justify-between">
-                  <h3 className="truncate text-sm font-medium text-gray-900">
-                    {conversation.name}
-                  </h3>
-                  <span className="text-xs text-gray-500">{conversation.timestamp}</span>
+                  <h3 className="truncate text-sm font-medium">{conversation.name}</h3>
+                  <span className="text-muted-foreground text-xs">{conversation.timestamp}</span>
                 </div>
                 <p className="text-muted-foreground mt-1 truncate text-sm">
                   {conversation.lastMessage}

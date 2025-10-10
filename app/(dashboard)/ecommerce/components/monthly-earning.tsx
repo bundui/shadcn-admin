@@ -17,39 +17,40 @@ const chartData = [
   { month: "March", desktop: 237, mobile: 120 },
   { month: "April", desktop: 73, mobile: 190 },
   { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 }
+  { month: "June", desktop: 214, mobile: 140 },
+  { month: "July", desktop: 150, mobile: 120 }
 ];
 const chartConfig = {
   desktop: {
     label: "Desktop",
-    color: "var(--primary)"
+    color: "var(--muted)"
   },
   mobile: {
     label: "Mobile",
-    color: "var(--primary)"
+    color: "var(--chart-2)"
   },
   label: {
-    color: "var(--background)"
+    color: "var(--muted-foreground)"
   }
 } satisfies ChartConfig;
 
 export default function MonthlyEarning() {
   return (
     <Card>
-      <CardHeader className="pb-3">
-        <CardTitle className="text-lg font-semibold">Monthly Earning</CardTitle>
-        <div className="flex items-center gap-2">
-          <span className="text-3xl font-bold">32.46K</span>
-          <Badge variant="secondary" className="bg-green-100 text-green-700">
-            +12.4%
-          </Badge>
-        </div>
+      <CardHeader className="flex flex-row items-center justify-between">
+        <CardTitle>Monthly Earning</CardTitle>
         <CardAction>
           <CardHeaderDropdown />
         </CardAction>
       </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig}>
+        <div className="mb-4 flex items-center gap-2">
+          <span className="text-2xl font-bold">32.46K</span>
+          <Badge variant="outline" className="bg-green-100 text-green-700">
+            +12.4%
+          </Badge>
+        </div>
+        <ChartContainer className="h-80 w-full" config={chartConfig}>
           <BarChart
             accessibilityLayer
             data={chartData}

@@ -3,7 +3,14 @@
 import React from "react";
 import { Label, Pie, PieChart } from "recharts";
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import CardHeaderDropdown from "@/components/card-header-dropdown";
 import {
@@ -54,12 +61,11 @@ export default function PerformanceGoal() {
 
   return (
     <Card>
-      <CardHeader className="pb-3">
-        <CardTitle className="text-lg font-semibold">
-          Performance Goal
+      <CardHeader className="flex flex-row items-center justify-between">
+        <CardTitle>Performance Goal</CardTitle>
+        <CardAction>
           <CardHeaderDropdown />
-        </CardTitle>
-        <CardDescription>Monthly performance reports</CardDescription>
+        </CardAction>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig} className="mx-auto aspect-square max-h-[250px]">

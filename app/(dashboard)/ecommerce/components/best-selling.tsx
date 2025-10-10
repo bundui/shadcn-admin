@@ -14,7 +14,7 @@ export default function BestSelling() {
   return (
     <Card>
       <CardHeader className="flex flex-row items-center justify-between">
-        <CardTitle className="text-lg font-semibold">Best Selling</CardTitle>
+        <CardTitle>Best Selling</CardTitle>
         <Button variant="ghost" size="sm">
           <MoreHorizontal className="h-4 w-4" />
         </Button>

@@ -17,6 +17,7 @@ import {
   BreadcrumbSeparator
 } from "@/components/ui/breadcrumb";
 import { Button } from "@/components/ui/button";
+import ThemeSwitcher from "@/components/theme-switcher";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -43,6 +44,7 @@ export function SiteHeader() {
         <div className="ml-auto flex items-center gap-2">
           <MessagesPanel />
           <NotificationsPanel />
+          <ThemeSwitcher />
           <div className="ms-3">
             <Button size="sm" asChild>
               <Link href="/pricing">

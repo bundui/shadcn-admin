@@ -111,7 +111,7 @@ export default function TopSellingStores() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-lg">Top Selling Stores</CardTitle>
+        <CardTitle>Top Selling Stores</CardTitle>
         <CardDescription>
           Performance ranking based on sales, revenue, and growth metrics
         </CardDescription>
