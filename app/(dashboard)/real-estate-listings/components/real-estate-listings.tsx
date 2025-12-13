@@ -1,358 +1,475 @@
 "use client";
 
-import { useState } from "react";
-import {
-  Heart,
-  MapPin,
-  Bed,
-  Users,
-  Bath,
-  Maximize2,
-  Search,
-  SlidersHorizontal
-} from "lucide-react";
+import { useState, useMemo } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardAction, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import { Badge } from "@/components/ui/badge";
-
-const propertyTypes = [
-  { id: "house", label: "House", icon: "🏠" },
-  { id: "apartment", label: "Apartment", icon: "🏢" },
-  { id: "commercial", label: "Commercial", icon: "🏪" },
-  { id: "land", label: "Land Plot", icon: "🏞️" }
-];
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue
+} from "@/components/ui/select";
+import { Switch } from "@/components/ui/switch";
+import { Check, Info } from "lucide-react";
 
 const properties = [
   {
     id: 1,
-    title: "Summit Crest Residences",
-    location: "Beverly Hills, California",
-    price: 13600000,
-    bedrooms: 2,
-    guests: 2,
+    title: "3 BHK Residential Apartment in Ayyapakkam",
+    location: "BBCL Ayyapakkam",
+    price: 95000,
+    pricePerSqFt: 73,
+    area: 1305,
+    areaDetails: "(121 sq.m.) Super built-up Area",
+    bhk: 3,
     baths: 2,
-    area: "4x7 m²",
-    image: "/avatars/07.jpeg",
-    featured: true
+    description:
+      "Residential apartment for sale in BBCL Ayyapakkam, Chennai. This property promises a contented and comfortable lifestyle with modern amenities and excellent connectivity.",
+    verified: true,
+    postedDate: "April 22, 2020",
+    owner: "Inez Freeman",
+    image:
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    society: "vijay",
+    furnishing: "furnished",
+    underConstruction: false,
+    readyToMove: true,
+    hasPhotos: true
   },
   {
     id: 2,
-    title: "Palm Grove Estates",
-    location: "London Docklands, UK",
-    price: 5435032,
-    bedrooms: 2,
-    guests: 2,
+    title: "3 BHK Residential Apartment in K.K. Nagar",
+    location: "NML K.K. Nagar",
+    price: 98000,
+    pricePerSqFt: 75,
+    area: 1305,
+    areaDetails: "(121 sq.m.) Super built-up Area",
+    bhk: 3,
     baths: 2,
-    area: "4x7 m²",
-    image: "/avatars/07.jpeg",
-    featured: false
+    description:
+      "This beautiful east facing, Vastu compliant unit is situated on ground of 2 floors, in a builder floor building with premium finishes and great natural light.",
+    verified: false,
+    postedDate: "May 13, 2020",
+    owner: "Carrie Reyes",
+    image:
+      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    society: "olympia",
+    furnishing: "Semi furnished",
+    underConstruction: true,
+    readyToMove: false,
+    hasPhotos: true
   },
   {
     id: 3,
-    title: "Oceanview Retreat",
-    location: "Dubai Marina, UAE",
-    price: 25430000,
-    bedrooms: 2,
-    guests: 2,
+    title: "3 BHK Residential Apartment in Lancor Abode Valley",
+    location: "Lancor Abode Valley, Potheri",
+    price: 92000,
+    pricePerSqFt: 70,
+    area: 1305,
+    areaDetails: "(121 sq.m.) Super built-up Area",
+    bhk: 3,
     baths: 2,
-    area: "4x7 m²",
-    image: "/avatars/07.jpeg",
-    featured: false
+    description:
+      "This builder floor is a semi-furnished unit and consists of one wardrobe, AC, fans, lights and modular kitchen with excellent amenities in a gated community.",
+    verified: true,
+    postedDate: "June 13, 2020",
+    owner: "Mitchell Spencer",
+    image:
+      "https://plus.unsplash.com/premium_photo-1689609950112-d66095626efb?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    society: "alliance",
+    furnishing: "Semi furnished",
+    underConstruction: false,
+    readyToMove: true,
+    hasPhotos: true
   },
   {
     id: 4,
-    title: "Skyline Peaks",
-    location: "South Beach, Miami",
-    price: 456000,
-    bedrooms: 2,
-    guests: 2,
+    title: "2 BHK Apartment in Provident Cosmo City",
+    location: "Provident Cosmo City",
+    price: 65000,
+    pricePerSqFt: 68,
+    area: 950,
+    areaDetails: "(88 sq.m.) Super built-up Area",
+    bhk: 2,
     baths: 2,
-    area: "4x7 m²",
-    image: "/avatars/07.jpeg",
-    featured: false
+    description:
+      "Spacious 2 bedroom apartment with modern amenities, gym, swimming pool and children's play area. Perfect for small families looking for quality living.",
+    verified: true,
+    postedDate: "March 15, 2020",
+    owner: "Sarah Johnson",
+    image:
+      "https://plus.unsplash.com/premium_photo-1689609950069-2961f80b1e70?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    society: "provident",
+    furnishing: "Fully furnished",
+    underConstruction: false,
+    readyToMove: true,
+    hasPhotos: true
+  },
+  {
+    id: 5,
+    title: "4 BHK Luxury Villa in KG Signature City",
+    location: "KG Signature City",
+    price: 185000,
+    pricePerSqFt: 92,
+    area: 2010,
+    areaDetails: "(187 sq.m.) Super built-up Area",
+    bhk: 4,
+    baths: 3,
+    description:
+      "Luxurious 4 bedroom villa with premium specifications, private garden, and exclusive clubhouse facilities. Experience elevated living in a prime location.",
+    verified: true,
+    postedDate: "July 8, 2020",
+    owner: "David Williams",
+    image:
+      "https://images.unsplash.com/photo-1605146769289-440113cc3d00?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    society: "kg",
+    furnishing: "Unfurnished",
+    underConstruction: false,
+    readyToMove: false,
+    hasPhotos: true
   }
 ];
 
-const basicCriteria = [
-  { id: "newly-built", label: "Newly Built" },
-  { id: "parking", label: "Parking Space" },
-  { id: "furnished", label: "Furnished" },
-  { id: "pool", label: "Swimming Pool" }
+const societies = [
+  { id: "provident", name: "Provident Cosmo City" },
+  { id: "olympia", name: "Olympia Opaline" },
+  { id: "vijay", name: "Vijay Shanthi Lotus Pond", checked: true },
+  { id: "kg", name: "KG Signature City" },
+  { id: "alliance", name: "Alliance Orchid Springs" }
 ];
 
-export default function RealEstateListings() {
-  const [selectedPropertyTypes, setSelectedPropertyTypes] = useState(["house"]);
-  const [priceRange, setPriceRange] = useState([500, 4500]);
-  const [selectedRooms, setSelectedRooms] = useState([2]);
-  const [selectedCriteria, setSelectedCriteria] = useState<string[]>([]);
-  const [favorites, setFavorites] = useState<number[]>([]);
-  const [searchLocation, setSearchLocation] = useState("");
+export function RealEstateListings() {
+  const [budget, setBudget] = useState([20, 200]);
+  const [selectedBedrooms, setSelectedBedrooms] = useState<number[]>([]);
+  const [selectedFurnishing, setSelectedFurnishing] = useState<string[]>([]);
+  const [selectedSocieties, setSelectedSocieties] = useState<string[]>([]);
+  const [ownerVerified, setOwnerVerified] = useState(false);
+  const [underConstruction, setUnderConstruction] = useState(false);
+  const [readyToMove, setReadyToMove] = useState(false);
+  const [withPhotos, setWithPhotos] = useState(false);
+  const [familyMode, setFamilyMode] = useState(false);
+  const [sortBy, setSortBy] = useState("price");
+
+  const filteredAndSortedProperties = useMemo(() => {
+    const filtered = properties.filter((property) => {
+      // Budget filter (price in thousands)
+      if (property.price < budget[0] * 1000 || property.price > budget[1] * 1000) return false;
+
+      // Bedroom filter
+      if (selectedBedrooms.length > 0 && !selectedBedrooms.includes(property.bhk)) return false;
+
+      // Society filter
+      if (selectedSocieties.length > 0 && !selectedSocieties.includes(property.society))
+        return false;
+
+      // Furnishing filter
+      if (selectedFurnishing.length > 0 && !selectedFurnishing.includes(property.furnishing))
+        return false;
+
+      // Top filter badges
+      if (ownerVerified && !property.verified) return false;
+      if (underConstruction && !property.underConstruction) return false;
+      if (readyToMove && !property.readyToMove) return false;
+      if (withPhotos && !property.hasPhotos) return false;
+
+      return true;
+    });
+
+    // Sort filtered results
+    filtered.sort((a, b) => {
+      if (sortBy === "price") return a.price - b.price;
+      if (sortBy === "area") return b.area - a.area;
+      if (sortBy === "date")
+        return new Date(b.postedDate).getTime() - new Date(a.postedDate).getTime();
+      return 0;
+    });
+
+    return filtered;
+  }, [
+    budget,
+    selectedBedrooms,
+    selectedSocieties,
+    selectedFurnishing,
+    ownerVerified,
+    underConstruction,
+    readyToMove,
+    withPhotos,
+    sortBy
+  ]);
+
+  const toggleBedroom = (bedroom: number) => {
+    setSelectedBedrooms((prev) =>
+      prev.includes(bedroom) ? prev.filter((b) => b !== bedroom) : [...prev, bedroom]
+    );
+  };
+
+  const toggleFurnishing = (furnishing: string) => {
+    setSelectedFurnishing((prev) =>
+      prev.includes(furnishing) ? prev.filter((f) => f !== furnishing) : [...prev, furnishing]
+    );
+  };
+
+  const toggleSociety = (society: string) => {
+    setSelectedSocieties((prev) =>
+      prev.includes(society) ? prev.filter((s) => s !== society) : [...prev, society]
+    );
+  };
+
+  const clearAllFilters = () => {
+    setBudget([20, 200]);
+    setSelectedBedrooms([]);
+    setSelectedFurnishing([]);
+    setSelectedSocieties([]);
+    setOwnerVerified(false);
+    setUnderConstruction(false);
+    setReadyToMove(false);
+    setWithPhotos(false);
+  };
 
   const formatPrice = (price: number) => {
-    if (price >= 1000000) {
-      return `$${(price / 1000000).toFixed(1)}M`;
-    }
-    return `$${price.toLocaleString()}`;
-  };
-
-  const toggleFavorite = (propertyId: number) => {
-    setFavorites((prev) =>
-      prev.includes(propertyId) ? prev.filter((id) => id !== propertyId) : [...prev, propertyId]
-    );
-  };
-
-  const togglePropertyType = (typeId: string) => {
-    setSelectedPropertyTypes((prev) =>
-      prev.includes(typeId) ? prev.filter((id) => id !== typeId) : [...prev, typeId]
-    );
-  };
-
-  const toggleRoom = (roomCount: number) => {
-    setSelectedRooms((prev) =>
-      prev.includes(roomCount) ? prev.filter((count) => count !== roomCount) : [...prev, roomCount]
-    );
-  };
-
-  const toggleCriteria = (criteriaId: string) => {
-    setSelectedCriteria((prev) =>
-      prev.includes(criteriaId) ? prev.filter((id) => id !== criteriaId) : [...prev, criteriaId]
-    );
+    return new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+      maximumFractionDigits: 0
+    }).format(price);
   };
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
-      {/* Sidebar Filters */}
-      <div className="w-80 border-r bg-white p-6 shadow-sm">
-        <div className="space-y-6">
-          <div>
-            <h2 className="mb-4 text-lg font-semibold">Filters</h2>
+    <div className="px-4">
+      <header className="py-4">
+        <h1 className="text-xl font-semibold">
+          {filteredAndSortedProperties.length} search results
+        </h1>
+      </header>
 
-            {/* Location Search */}
-            <div className="space-y-2">
-              <Label htmlFor="location">Location</Label>
-              <div className="relative">
-                <Search className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 transform text-gray-400" />
-                <Input
-                  id="location"
-                  placeholder="Enter location..."
-                  value={searchLocation}
-                  onChange={(e) => setSearchLocation(e.target.value)}
-                  className="pl-10"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Property Type */}
-          <div>
-            <h3 className="mb-3 font-medium">Property Type</h3>
-            <div className="grid grid-cols-2 gap-2">
-              {propertyTypes.map((type) => (
+      <div className="grid gap-4 lg:grid-cols-[300px_1fr]">
+        {/* Sidebar Filters */}
+        <aside className="space-y-4">
+          <Card className="shadow-none">
+            <CardHeader className="flex items-center justify-between">
+              <CardTitle>Applied Filters</CardTitle>
+              <CardAction>
                 <Button
-                  key={type.id}
-                  variant={selectedPropertyTypes.includes(type.id) ? "default" : "outline"}
+                  variant="ghost"
                   size="sm"
-                  onClick={() => togglePropertyType(type.id)}
-                  className="h-auto flex-col justify-start gap-1 p-3">
-                  <span className="text-lg">{type.icon}</span>
-                  <span className="text-xs">{type.label}</span>
+                  className="text-primary"
+                  onClick={clearAllFilters}>
+                  Clear All
                 </Button>
-              ))}
-            </div>
-          </div>
-
-          {/* Price Range */}
-          <div>
-            <h3 className="mb-3 font-medium">Price Range</h3>
-            <div className="px-2">
-              <Slider
-                value={priceRange}
-                onValueChange={setPriceRange}
-                max={5000}
-                min={0}
-                step={100}
-                className="mb-4"
-              />
-              <div className="text-muted-foreground flex justify-between text-sm">
-                <span>{priceRange[0]}</span>
-                <span>{priceRange[1]}</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Number of Rooms */}
-          <div>
-            <h3 className="mb-3 font-medium">Number Of Rooms</h3>
-            <div className="flex gap-2">
-              {[1, 2, 3, "4+"].map((room) => (
-                <Button
-                  key={room}
-                  variant={
-                    selectedRooms.includes(typeof room === "number" ? room : 4)
-                      ? "default"
-                      : "outline"
-                  }
-                  size="sm"
-                  onClick={() => toggleRoom(typeof room === "number" ? room : 4)}
-                  className="h-12 w-12">
-                  {room}
-                </Button>
-              ))}
-            </div>
-          </div>
-
-          {/* Basic Criteria */}
-          <div>
-            <h3 className="mb-3 font-medium">Basic Criteria</h3>
-            <div className="space-y-3">
-              {basicCriteria.map((criteria) => (
-                <div key={criteria.id} className="flex items-center space-x-2">
-                  <Checkbox
-                    id={criteria.id}
-                    checked={selectedCriteria.includes(criteria.id)}
-                    onCheckedChange={() => toggleCriteria(criteria.id)}
+              </CardAction>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              {/* Budget Filter */}
+              <div className="space-y-3">
+                <Label className="font-semibold">Budget</Label>
+                <div className="px-2 pt-2">
+                  <Slider
+                    value={budget}
+                    onValueChange={setBudget}
+                    min={20}
+                    max={200}
+                    step={5}
+                    className="mb-4"
                   />
-                  <Label htmlFor={criteria.id} className="text-sm">
-                    {criteria.label}
-                  </Label>
+                  <div className="text-muted-foreground flex justify-between text-sm">
+                    <span>${budget[0]}k</span>
+                    <span>${budget[1]}k</span>
+                  </div>
                 </div>
-              ))}
-            </div>
-          </div>
+              </div>
 
-          <Button variant="outline" className="w-full bg-transparent">
-            <SlidersHorizontal className="mr-2 h-4 w-4" />
-            All Filters
-          </Button>
-        </div>
-      </div>
+              {/* Bedrooms Filter */}
+              <div className="space-y-3">
+                <Label className="font-semibold">No. of Bedrooms</Label>
+                <div className="grid grid-cols-3 gap-2">
+                  {[1, 2, 3, 4, 6, 7, 8].map((bedroom) => (
+                    <Button
+                      key={bedroom}
+                      variant={selectedBedrooms.includes(bedroom) ? "default" : "outline"}
+                      size="sm"
+                      onClick={() => toggleBedroom(bedroom)}>
+                      {bedroom}BHK
+                    </Button>
+                  ))}
+                </div>
+              </div>
 
-      {/* Main Content */}
-      <div className="flex flex-1">
-        {/* Property Listings */}
-        <div className="flex-1 p-6">
-          <div className="mb-6">
-            <h1 className="text-2xl font-bold">Search Results (248)</h1>
-          </div>
-
-          <div className="space-y-6">
-            {properties.map((property) => (
-              <Card key={property.id} className="overflow-hidden transition-shadow hover:shadow-lg">
-                <CardContent className="p-0">
-                  <div className="flex">
-                    <div className="relative h-48 w-80">
-                      <img
-                        src={property.image || "/avatars/08.jpeg"}
-                        alt={property.title}
-                        className="h-full w-full object-cover"
+              {/* Societies Filter */}
+              <div className="space-y-3">
+                <Label className="font-semibold">New Projects / Societies</Label>
+                <div className="space-y-2">
+                  {societies.map((society) => (
+                    <div key={society.id} className="flex items-center space-x-2">
+                      <Checkbox
+                        id={society.id}
+                        checked={selectedSocieties.includes(society.id)}
+                        onCheckedChange={() => toggleSociety(society.id)}
                       />
-                      {property.featured && (
-                        <Badge className="absolute top-3 left-3 bg-blue-600">Featured</Badge>
+                      <Label htmlFor={society.id} className="cursor-pointer text-sm font-normal">
+                        {society.name}
+                      </Label>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Furnishing Status Filter */}
+              <div className="space-y-3">
+                <Label className="font-semibold">Furnishing Status</Label>
+                <div className="grid grid-cols-2 gap-2">
+                  {["Unfurnished", "Semi furnished", "furnished", "Fully furnished"].map(
+                    (furnishing) => (
+                      <Button
+                        key={furnishing}
+                        variant={selectedFurnishing.includes(furnishing) ? "default" : "outline"}
+                        size="sm"
+                        onClick={() => toggleFurnishing(furnishing)}
+                        className="text-xs">
+                        {furnishing}
+                      </Button>
+                    )
+                  )}
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </aside>
+
+        {/* Property Listings */}
+        <main className="space-y-4">
+          <Card className="p-0">
+            <CardContent className="bg-card">
+              <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                <div className="flex flex-wrap gap-2">
+                  <Badge
+                    variant={ownerVerified ? "default" : "secondary"}
+                    className="cursor-pointer px-3 py-1"
+                    onClick={() => setOwnerVerified(!ownerVerified)}>
+                    Owner Verified
+                  </Badge>
+                  <Badge
+                    variant={underConstruction ? "default" : "secondary"}
+                    className="cursor-pointer px-3 py-1"
+                    onClick={() => setUnderConstruction(!underConstruction)}>
+                    Under Construction
+                  </Badge>
+                  <Badge
+                    variant={readyToMove ? "default" : "secondary"}
+                    className="cursor-pointer px-3 py-1"
+                    onClick={() => setReadyToMove(!readyToMove)}>
+                    Ready To Move
+                  </Badge>
+                  <Badge
+                    variant={withPhotos ? "default" : "secondary"}
+                    className="cursor-pointer px-3 py-1"
+                    onClick={() => setWithPhotos(!withPhotos)}>
+                    With Photos
+                  </Badge>
+                </div>
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+                  <div className="flex items-center gap-2">
+                    <Switch id="family-mode" checked={familyMode} onCheckedChange={setFamilyMode} />
+                    <Label htmlFor="family-mode" className="flex items-center gap-1 text-sm">
+                      Family mode <Info className="text-muted-foreground size-4" />
+                    </Label>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Select value={sortBy} onValueChange={setSortBy}>
+                      <SelectTrigger id="sort" className="">
+                        Sort by: <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="price">Price</SelectItem>
+                        <SelectItem value="date">Date</SelectItem>
+                        <SelectItem value="area">Area</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {filteredAndSortedProperties.length === 0 ? (
+            <Card>
+              <CardContent className="p-12 text-center">
+                <p className="text-muted-foreground text-lg">
+                  No properties found matching your filters. Try adjusting your search criteria.
+                </p>
+              </CardContent>
+            </Card>
+          ) : (
+            filteredAndSortedProperties.map((property) => (
+              <Card key={property.id} className="py-0 shadow-none">
+                <CardContent className="bg-card p-0">
+                  <div className="grid md:grid-cols-[250px_1fr]">
+                    {/* Property Image */}
+                    <div className="relative">
+                      <img
+                        src={property.image || "/placeholder.svg"}
+                        alt={property.title}
+                        className="aspect-square h-full w-full object-cover md:rounded-l-lg"
+                      />
+                      {property.verified && (
+                        <Badge className="absolute top-2 right-2 bg-white text-green-600 hover:bg-white">
+                          <Check /> Verified
+                        </Badge>
                       )}
                     </div>
 
-                    <div className="flex flex-1 justify-between p-6">
-                      <div className="space-y-3">
-                        <div className="text-muted-foreground flex items-center text-sm">
-                          <MapPin className="mr-1 h-4 w-4" />
-                          {property.location}
+                    {/* Property Details */}
+                    <div className="px-6 py-4">
+                      <div className="space-y-4">
+                        <div>
+                          <h3 className="text-foreground text-lg font-semibold">
+                            {property.title}
+                          </h3>
+                          <p className="text-muted-foreground text-sm">{property.location}</p>
                         </div>
 
-                        <h3 className="text-xl font-semibold">{property.title}</h3>
-
-                        <div className="text-muted-foreground flex items-center gap-6 text-sm">
-                          <div className="flex items-center gap-1">
-                            <Bed className="h-4 w-4" />
-                            {property.bedrooms} Bedrooms
+                        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+                          <div>
+                            <p className="text-xl font-bold">{formatPrice(property.price)}</p>
+                            <p className="text-muted-foreground text-xs">
+                              ${property.pricePerSqFt}/sq.ft.
+                            </p>
                           </div>
-                          <div className="flex items-center gap-1">
-                            <Users className="h-4 w-4" />
-                            {property.guests} Guests
+                          <div>
+                            <p className="text-xl font-bold">{property.area} sq.ft.</p>
+                            <p className="text-muted-foreground text-xs">{property.areaDetails}</p>
                           </div>
-                          <div className="flex items-center gap-1">
-                            <Bath className="h-4 w-4" />
-                            {property.baths} Baths
+                          <div>
+                            <p className="text-xl font-bold">{property.bhk} BHK</p>
+                            <p className="text-muted-foreground text-xs">{property.baths} Baths</p>
                           </div>
                         </div>
 
-                        <div className="text-muted-foreground flex items-center gap-1 text-sm">
-                          <Maximize2 className="h-4 w-4" />
-                          {property.area}
-                        </div>
-                      </div>
+                        <p className="text-muted-foreground line-clamp-2 text-sm">
+                          {property.description}{" "}
+                          <span className="text-primary cursor-pointer">More</span>
+                        </p>
 
-                      <div className="flex flex-col items-end justify-between">
-                        <Button
-                          variant="ghost"
-                          size="sm"
-                          onClick={() => toggleFavorite(property.id)}
-                          className="p-2">
-                          <Heart
-                            className={`h-5 w-5 ${
-                              favorites.includes(property.id)
-                                ? "fill-red-500 text-red-500"
-                                : "text-gray-400"
-                            }`}
-                          />
-                        </Button>
-
-                        <div className="text-right">
-                          <div className="text-2xl font-bold">{formatPrice(property.price)}</div>
+                        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                          <Button className="w-full sm:w-auto">Contact Owner</Button>
+                          <div className="text-muted-foreground text-xs sm:text-right">
+                            <p>
+                              Posted on {property.postedDate} by Owner {property.owner}
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </CardContent>
               </Card>
-            ))}
-          </div>
-        </div>
-
-        {/* Map View */}
-        <div className="w-96 border-l bg-white">
-          <div className="border-b p-4">
-            <Button variant="outline" size="sm" className="w-full bg-transparent">
-              View larger map
-            </Button>
-          </div>
-          <div className="relative h-full overflow-hidden bg-gradient-to-br from-green-100 to-blue-200">
-            {/* Simplified map representation */}
-            <div className="absolute inset-0 bg-gradient-to-br from-green-200 via-blue-100 to-blue-300">
-              <div className="absolute top-20 left-20 h-2 w-2 rounded-full bg-red-500"></div>
-              <div className="absolute top-32 right-16 h-2 w-2 rounded-full bg-red-500"></div>
-              <div className="absolute bottom-32 left-12 h-2 w-2 rounded-full bg-red-500"></div>
-              <div className="absolute right-20 bottom-20 h-2 w-2 rounded-full bg-red-500"></div>
-
-              {/* Map labels */}
-              <div className="absolute top-16 left-8 text-xs font-medium">Vancouver</div>
-              <div className="absolute top-24 right-8 text-xs font-medium">Toronto</div>
-              <div className="absolute bottom-40 left-16 text-xs font-medium">Los Angeles</div>
-              <div className="absolute right-12 bottom-28 text-xs font-medium">Miami</div>
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform text-sm font-semibold">
-                United States
-              </div>
-            </div>
-
-            {/* Map controls */}
-            <div className="absolute right-4 bottom-4 flex flex-col gap-1">
-              <Button size="sm" variant="outline" className="h-8 w-8 bg-transparent p-0">
-                +
-              </Button>
-              <Button size="sm" variant="outline" className="h-8 w-8 bg-transparent p-0">
-                -
-              </Button>
-            </div>
-
-            {/* Attribution */}
-            <div className="text-muted-foreground absolute bottom-2 left-2 text-xs">
-              © 2025 Google, INEGI | Terms
-            </div>
-          </div>
-        </div>
+            ))
+          )}
+        </main>
       </div>
     </div>
   );

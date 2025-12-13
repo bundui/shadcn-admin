@@ -5,7 +5,7 @@ import Notifications from "./notifications";
 import UserMenu from "./user-menu";
 import Messages from "./messages";
 import Search from "./search";
-import { SidebarTrigger } from "@/components/ui/sidebar-v2";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 import { usePathname } from "next/navigation";
 import { Separator } from "@/components/ui/separator";
 

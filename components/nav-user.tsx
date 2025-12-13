@@ -23,7 +23,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar
-} from "@/components/ui/sidebar-v2";
+} from "@/components/ui/sidebar";
 
 export function NavUser({
   user

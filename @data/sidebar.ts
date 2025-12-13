@@ -1,6 +1,8 @@
 import { IconFolder, IconListDetails } from "@tabler/icons-react";
 import {
+  BrainIcon,
   Building2,
+  ChartNoAxesColumn,
   CircleIcon,
   ContactRound,
   CookingPot,
@@ -8,6 +10,7 @@ import {
   Landmark,
   MessageCircleMore,
   MessageCircleQuestionMark,
+  Presentation,
   School,
   ShieldAlert,
   ShoppingBag,
@@ -32,70 +35,46 @@ export const sidebarData = {
           items: [
             {
               title: "Dashboard",
-              url: "/ecommerce"
+              url: "/ecommerce-dashboard"
             },
             {
-              title: "Checkout",
-              url: "/checkout"
-            },
-            {
-              title: "Order Receipt",
-              url: "/order-receipt"
+              title: "Products List",
+              url: "/products"
             },
             {
               title: "Product Filter",
               url: "/product-filter"
+            },
+            {
+              title: "Checkout",
+              url: "/checkout"
             }
           ]
         },
         {
-          title: "CRM",
-          url: "/crm",
-          icon: UserRoundSearch,
-          items: [
-            {
-              title: "Dashboard",
-              url: "/crm"
-            },
-            {
-              title: "Customers",
-              url: "/customers"
-            },
-            {
-              title: "Customer Details",
-              url: "/customer-details"
-            }
-          ]
-        },
-        {
-          title: "Banking",
-          url: "/banking",
-          icon: Landmark
-        },
-        {
-          title: "Chats",
-          url: "/chats",
-          icon: MessageCircleMore
-        },
-        {
-          title: "Kanban Board",
-          url: "/kanban-board",
-          icon: SquareKanban
-        },
-        {
-          title: "POS App",
-          url: "/pos-app",
-          icon: CookingPot
-        },
-        {
-          title: "Social Media",
-          url: "/social-media",
-          icon: Earth
+          title: "Analytics",
+          url: "/analytics",
+          icon: ChartNoAxesColumn
         },
         {
           title: "Real Estate Listings",
           url: "/real-estate-listings",
           icon: School
+        },
+        {
+          title: "Account",
+          url: "/",
+          icon: ContactRound,
+          items: [
+            {
+              title: "User Profile",
+              url: "/user-profile"
+            },
+            {
+              title: "Settings",
+              url: "/settings"
+            }
+          ]
         },
         {
           title: "Job Postings",
@@ -106,21 +85,6 @@ export const sidebarData = {
           title: "Contacts",
           url: "/contacts",
           icon: IconListDetails
-        },
-        {
-          title: "Projects",
-          url: "/projects-list",
-          icon: IconFolder
-        },
-        {
-          title: "User Profile",
-          url: "/user-profile",
-          icon: ContactRound
-        },
-        {
-          title: "Settings",
-          url: "/settings",
-          icon: IconFolder
         },
         {
           title: "Help Center",
@@ -140,67 +104,17 @@ export const sidebarData = {
       ]
     },
     {
-      title: "Components",
+      title: "Apps",
       items: [
         {
-          title: "Base",
-          icon: ShoppingBag,
-          items: data
-            .filter((z) => z.category === "base")
-            .map((a) => ({
-              title: a.title,
-              url: `/components/${a.name}`
-            }))
+          title: "Chats",
+          url: "/chats",
+          icon: MessageCircleMore
         },
         {
-          title: "Feedback",
-          icon: ShoppingBag,
-          items: data
-            .filter((z) => z.category === "feedback")
-            .map((a) => ({
-              title: a.title,
-              url: `/components/${a.name}`
-            }))
-        },
-        {
-          title: "Forms",
-          icon: UserRoundSearch,
-          items: data
-            .filter((z) => z.category === "forms")
-            .map((a) => ({
-              title: a.title,
-              url: `/components/${a.name}`
-            }))
-        },
-        {
-          title: "Data Display",
-          icon: UserRoundSearch,
-          items: data
-            .filter((z) => z.category === "data-display")
-            .map((a) => ({
-              title: a.title,
-              url: `/components/${a.name}`
-            }))
-        },
-        {
-          title: "Navigation",
-          icon: UserRoundSearch,
-          items: data
-            .filter((z) => z.category === "navigation")
-            .map((a) => ({
-              title: a.title,
-              url: `/components/${a.name}`
-            }))
-        },
-        {
-          title: "Graph",
-          icon: UserRoundSearch,
-          items: data
-            .filter((z) => z.category === "graph")
-            .map((a) => ({
-              title: a.title,
-              url: `/components/${a.name}`
-            }))
+          title: "Kanban Board",
+          url: "/kanban-board",
+          icon: SquareKanban
         }
       ]
     }

@@ -12,7 +12,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem
-} from "@/components/ui/sidebar-v2";
+} from "@/components/ui/sidebar";
 
 import Logo from "@/components/layout/logo";
 import { sidebarData } from "@/@data/sidebar";

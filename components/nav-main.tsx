@@ -10,7 +10,7 @@ import {
   SidebarMenuSub,
   SidebarMenuSubButton,
   SidebarMenuSubItem
-} from "@/components/ui/sidebar-v2";
+} from "@/components/ui/sidebar";
 import {
   Collapsible,
   CollapsibleContent,

@@ -52,11 +52,7 @@ const projects = [
     name: "Website SEO",
     date: "10 May 2021",
     leader: "Eileen",
-    team: [
-      "/avatars/08.jpeg?height=24&width=24",
-      "/avatars/08.jpeg?height=24&width=24",
-      "/avatars/08.jpeg?height=24&width=24"
-    ],
+    team: ["/avatars/08.jpeg", "/avatars/08.jpeg", "/avatars/08.jpeg"],
     teamCount: 4,
     progress: 38,
     icon: <GlobeIcon className="h-4 w-4 text-orange-500" />,
@@ -67,7 +63,7 @@ const projects = [
     name: "Social Banners",
     date: "03 Jan 2021",
     leader: "Owen",
-    team: ["/avatars/08.jpeg?height=24&width=24", "/avatars/08.jpeg?height=24&width=24"],
+    team: ["/avatars/08.jpeg", "/avatars/08.jpeg"],
     teamCount: 2,
     progress: 45,
     icon: <MegaphoneIcon className="h-4 w-4 text-blue-500" />,
@@ -78,7 +74,7 @@ const projects = [
     name: "Logo Designs",
     date: "12 Aug 2021",
     leader: "Keith",
-    team: ["/avatars/08.jpeg?height=24&width=24", "/avatars/08.jpeg?height=24&width=24"],
+    team: ["/avatars/08.jpeg", "/avatars/08.jpeg"],
     teamCount: 1,
     progress: 92,
     icon: <PaletteIcon className="h-4 w-4 text-purple-500" />,
@@ -89,7 +85,7 @@ const projects = [
     name: "IOS App Design",
     date: "19 Apr 2021",
     leader: "Merline",
-    team: ["/avatars/08.jpeg?height=24&width=24", "/avatars/08.jpeg?height=24&width=24"],
+    team: ["/avatars/08.jpeg", "/avatars/08.jpeg"],
     teamCount: 1,
     progress: 56,
     icon: <SmartphoneIcon className="h-4 w-4 text-green-500" />,
@@ -100,7 +96,7 @@ const projects = [
     name: "Figma Dashboards",
     date: "08 Apr 2021",
     leader: "Harmonia",
-    team: ["/avatars/08.jpeg?height=24&width=24", "/avatars/08.jpeg?height=24&width=24"],
+    team: ["/avatars/08.jpeg", "/avatars/08.jpeg"],
     teamCount: 0,
     progress: 25,
     icon: <FigmaIcon className="h-4 w-4 text-red-500" />,
@@ -111,7 +107,7 @@ const projects = [
     name: "Crypto Admin",
     date: "29 Sept 2021",
     leader: "Allyson",
-    team: ["/avatars/08.jpeg?height=24&width=24", "/avatars/08.jpeg?height=24&width=24"],
+    team: ["/avatars/08.jpeg", "/avatars/08.jpeg"],
     teamCount: 1,
     progress: 36,
     icon: <LockIcon className="h-4 w-4 text-yellow-500" />,
@@ -122,7 +118,7 @@ const projects = [
     name: "Create Website",
     date: "20 Mar 2021",
     leader: "Georgie",
-    team: ["/avatars/08.jpeg?height=24&width=24", "/avatars/08.jpeg?height=24&width=24"],
+    team: ["/avatars/08.jpeg", "/avatars/08.jpeg"],
     teamCount: 3,
     progress: 72,
     icon: <CodeIcon className="h-4 w-4 text-cyan-500" />,
@@ -335,10 +331,7 @@ export default function ProfilePage() {
                   </p>
                   <div className="text-muted-foreground mt-2 flex items-center gap-2 text-sm">
                     <Avatar className="h-6 w-6">
-                      <AvatarImage
-                        src="/avatars/08.jpeg?height=24&width=24"
-                        alt="Lester McCarthy"
-                      />
+                      <AvatarImage src="/avatars/08.jpeg" alt="Lester McCarthy" />
                       <AvatarFallback>LM</AvatarFallback>
                     </Avatar>
                     <span>Lester McCarthy (Client)</span>
@@ -360,15 +353,15 @@ export default function ProfilePage() {
                   <p className="text-muted-foreground text-sm">6 team members in a project</p>
                   <div className="mt-2 flex items-center gap-2">
                     <Avatar className="h-6 w-6">
-                      <AvatarImage src="/avatars/08.jpeg?height=24&width=24" alt="Avatar 1" />
+                      <AvatarImage src="/avatars/08.jpeg" alt="Avatar 1" />
                       <AvatarFallback>A1</AvatarFallback>
                     </Avatar>
                     <Avatar className="-ml-2 h-6 w-6">
-                      <AvatarImage src="/avatars/08.jpeg?height=24&width=24" alt="Avatar 2" />
+                      <AvatarImage src="/avatars/08.jpeg" alt="Avatar 2" />
                       <AvatarFallback>A2</AvatarFallback>
                     </Avatar>
                     <Avatar className="-ml-2 h-6 w-6">
-                      <AvatarImage src="/avatars/08.jpeg?height=24&width=24" alt="Avatar 3" />
+                      <AvatarImage src="/avatars/08.jpeg" alt="Avatar 3" />
                       <AvatarFallback>A3</AvatarFallback>
                     </Avatar>
                     <div className="text-muted-foreground -ml-2 flex h-6 w-6 items-center justify-center rounded-full bg-gray-200 text-xs">

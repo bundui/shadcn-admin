@@ -13,11 +13,11 @@ export default function Logo(props: Props) {
       <Image
         src="/logo.png"
         alt="shadcn admin dashboard template logo"
-        width={28}
-        height={28}
-        className="rounded-md"
+        width={20}
+        height={20}
+        className="rounded-md invert"
       />
-      <span className="text-base font-semibold">Shadcn Admin</span>
+      <span className="text-base font-semibold">Shadcnadmin</span>
     </Link>
   );
 }

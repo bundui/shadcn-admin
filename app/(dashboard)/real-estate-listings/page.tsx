@@ -1,4 +1,4 @@
-import RealEstateListings from "./components/real-estate-listings";
+import { RealEstateListings } from "./components/real-estate-listings";
 import { Metadata } from "next";
 import { generateMeta } from "@/lib/generate-meta";
 

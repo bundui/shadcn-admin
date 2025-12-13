@@ -90,23 +90,13 @@ export function ProfileSettings() {
                 <SelectContent>
                   <SelectItem value="United States">
                     <div className="flex items-center gap-2">
-                      <Image
-                        src="/avatars/08.jpeg?height=16&width=16"
-                        alt="US Flag"
-                        width={16}
-                        height={16}
-                      />
+                      <Image src="/avatars/08.jpeg" alt="US Flag" width={16} height={16} />
                       United States
                     </div>
                   </SelectItem>
                   <SelectItem value="Canada">
                     <div className="flex items-center gap-2">
-                      <Image
-                        src="/avatars/08.jpeg?height=16&width=16"
-                        alt="Canada Flag"
-                        width={16}
-                        height={16}
-                      />
+                      <Image src="/avatars/08.jpeg" alt="Canada Flag" width={16} height={16} />
                       Canada
                     </div>
                   </SelectItem>

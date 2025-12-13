@@ -1,4 +1,3 @@
-import { Badge } from "@/components/ui/badge";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -18,10 +17,8 @@ export default function MessagesPanel() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button size="sm" variant="link" className="text-foreground relative">
-          <MailIcon className="animate-tada h-5 w-5" />
-          <Badge className="absolute bottom-[calc(100%-10px)] left-[calc(100%-12px)] h-4 w-4 items-center justify-center rounded-full p-0 text-[8px] font-semibold">
-            3
-          </Badge>
+          <MailIcon />
+          <span className="bg-destructive absolute bottom-[calc(100%-10px)] left-[calc(100%-12px)] size-2 items-center justify-center rounded-full p-0 text-[8px] font-semibold" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="z-999 mx-4 max-w-sm p-0 lg:w-[320px]">

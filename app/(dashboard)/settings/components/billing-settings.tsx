@@ -76,12 +76,7 @@ export function BillingSettings() {
           <div className="grid gap-4">
             <div className="flex items-center justify-between rounded-md border p-4">
               <div className="flex items-center gap-3">
-                <Image
-                  src="/avatars/08.jpeg?height=24&width=36"
-                  alt="Visa"
-                  width={36}
-                  height={24}
-                />
+                <Image src="/avatars/08.jpeg" alt="Visa" width={36} height={24} />
                 <div>
                   <p className="font-medium">
                     Carolyn Perkins •••• 0392{" "}
@@ -97,12 +92,7 @@ export function BillingSettings() {
             </div>
             <div className="flex items-center justify-between rounded-md border p-4">
               <div className="flex items-center gap-3">
-                <Image
-                  src="/avatars/08.jpeg?height=24&width=36"
-                  alt="Mastercard"
-                  width={36}
-                  height={24}
-                />
+                <Image src="/avatars/08.jpeg" alt="Mastercard" width={36} height={24} />
                 <div>
                   <p className="font-medium">Carolyn Perkins •••• 8461</p>
                   <p className="text-muted-foreground text-sm">Expired Jun 2025</p>

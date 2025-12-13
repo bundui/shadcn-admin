@@ -10,7 +10,7 @@ export function generateMeta({
   canonical: string;
 }): Metadata {
   return {
-    title: `${title} - Shadcn Admin Dashboard`,
+    title: `${title} - Shadcnadmin`,
     description: description,
     metadataBase: new URL(`${process.env.BASE_URL}`),
     alternates: {

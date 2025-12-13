@@ -44,12 +44,7 @@ export function SecuritySettings() {
           <div className="grid gap-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <Image
-                  src="/avatars/08.jpeg?height=24&width=24"
-                  alt="Google Authenticator"
-                  width={24}
-                  height={24}
-                />
+                <Image src="/avatars/08.jpeg" alt="Google Authenticator" width={24} height={24} />
                 <div>
                   <p className="font-medium">Google Authenticator</p>
                   <p className="text-muted-foreground text-sm">
@@ -65,12 +60,7 @@ export function SecuritySettings() {
             </div>
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <Image
-                  src="/avatars/08.jpeg?height=24&width=24"
-                  alt="Okta Verify"
-                  width={24}
-                  height={24}
-                />
+                <Image src="/avatars/08.jpeg" alt="Okta Verify" width={24} height={24} />
                 <div>
                   <p className="font-medium">Okta Verify</p>
                   <p className="text-muted-foreground text-sm">
@@ -83,12 +73,7 @@ export function SecuritySettings() {
             </div>
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <Image
-                  src="/avatars/08.jpeg?height=24&width=24"
-                  alt="Email verification"
-                  width={24}
-                  height={24}
-                />
+                <Image src="/avatars/08.jpeg" alt="Email verification" width={24} height={24} />
                 <div>
                   <p className="font-medium">E Mail verification</p>
                   <p className="text-muted-foreground text-sm">
