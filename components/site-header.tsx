@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 
 import { Separator } from "@/components/ui/separator";
-import { SidebarTrigger, useSidebar } from "@/components/ui/sidebar";
+import { useSidebar } from "@/components/ui/sidebar";
 import { usePathname } from "next/navigation";
 import NotificationsPanel from "@/components/layout/dashboard/header/notifications";
 import {
@@ -55,6 +55,11 @@ export function SiteHeader() {
         <div className="ml-auto flex items-center gap-2">
           <NotificationsPanel />
           <ThemeSwitcher />
+          <div className="ms-3">
+            <Button size="sm" asChild>
+              <Link href="https://github.com/bundui/shadcn-admin">Github</Link>
+            </Button>
+          </div>
         </div>
       </div>
     </header>

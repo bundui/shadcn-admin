@@ -6,7 +6,7 @@ config();
 const isProduction = process.env.NODE_ENV === "production";
 
 const nextConfig: NextConfig = {
-  assetPrefix: isProduction ? "https://dashboard.shadcnadmin.com" : undefined,
+  // assetPrefix: isProduction ? "https://dashboard.shadcnadmin.com" : undefined,
   images: {
     remotePatterns: [
       {
