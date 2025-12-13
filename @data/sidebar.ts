@@ -30,28 +30,6 @@ export const sidebarData = {
       title: "Main",
       items: [
         {
-          title: "Ecommerce",
-          icon: ShoppingBag,
-          items: [
-            {
-              title: "Dashboard",
-              url: "/ecommerce-dashboard"
-            },
-            {
-              title: "Products List",
-              url: "/products"
-            },
-            {
-              title: "Product Filter",
-              url: "/product-filter"
-            },
-            {
-              title: "Checkout",
-              url: "/checkout"
-            }
-          ]
-        },
-        {
           title: "Analytics",
           url: "/analytics",
           icon: ChartNoAxesColumn

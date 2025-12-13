@@ -1,81 +1,47 @@
 import { Metadata } from "next";
 import { generateMeta } from "@/lib/generate-meta";
-import { ListFilterIcon } from "lucide-react";
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import CalendarDateRangePicker from "@/components/custom-date-range-picker";
-import { Button } from "@/components/ui/button";
-
-import PerformanceGoal from "./components/performance-goal";
-import MonthlyEarning from "./components/monthly-earning";
-import { SalesReport } from "./components/sales-report";
-import StoreOverview from "./components/store-overview";
-import { WeeklyStats } from "./components/weekly-stats";
-import { SalesHistory } from "./components/sales-history";
-import { BestSelling } from "./components/best-selling";
-import TopSellingStores from "./components/top-selling-stores";
-import SalesByCountries from "./components/sales-by-countries";
-import EcommerceKpi from "./components/ecommerce-kpi";
-import RecentReviews from "./components/recent-reviews";
+import { QuickView } from "./components/quick-view";
+import { TopReferralPages } from "./components/top-referral-pages";
+import { TopBrowsingPages } from "./components/top-browsing-pages";
+import { VisitorsByCountries } from "./components/visitors-by-countries";
+import { AudienceMetricsChart } from "./components/audience-metrics-chart";
+import { SessionsByDevice } from "./components/session-by-device";
+import { TopCampaignsTable } from "./components/top-campaigns-table";
+import { VisitBySource } from "./components/visit-by-source";
+import { StatCards } from "./components/stat-cards";
 
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
-    title: "E-commerce Dashboard",
+    title: "Analytics Dashboard",
     description:
-      "An eCommerce template is a pre-designed ui template for managing products, orders, and sales data. Built with shadcn/ui, Tailwind CSS, Next.js, Vue.js, and React. Typescript is supported.",
-    canonical: "/ecommerce-dashboard"
+      "A list of orders generated using the Tanstack Table. Built with Tailwind CSS, Shadcn UI and Next.js.",
+    canonical: "/project-management-dashboard"
   });
 }
 
 export default function Page() {
   return (
-    <div className="min-h-screen space-y-6 p-6">
-      <Tabs defaultValue="account" className="w-full">
-        <div className="flex justify-between">
-          <TabsList>
-            <TabsTrigger value="account">Overview</TabsTrigger>
-            <TabsTrigger value="password">Reports</TabsTrigger>
-          </TabsList>
-          <div className="flex gap-2">
-            <CalendarDateRangePicker />
-            <Button>
-              <ListFilterIcon /> Filter
-            </Button>
-          </div>
+    <div className="gap-4 space-y-4 p-4">
+      <StatCards />
+      <div className="grid grid-cols-3 gap-4">
+        <QuickView />
+        <TopReferralPages />
+        <TopBrowsingPages />
+      </div>
+      <div className="grid grid-cols-4 gap-4">
+        <SessionsByDevice />
+        <div className="col-span-2">
+          <TopCampaignsTable />
         </div>
-        <TabsContent value="account" className="space-y-4">
-          <EcommerceKpi />
-
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-            <PerformanceGoal />
-            <MonthlyEarning />
-            <SalesByCountries />
-          </div>
-
-          <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
-            <div className="col-span-2">
-              <SalesReport />
-            </div>
-            <StoreOverview />
-          </div>
-
-          <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
-            <WeeklyStats />
-            <SalesHistory />
-            <BestSelling />
-          </div>
-
-          <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
-            <div className="col-span-1">
-              <RecentReviews />
-            </div>
-            <div className="col-span-2">
-              <TopSellingStores />
-            </div>
-          </div>
-        </TabsContent>
-        <TabsContent value="password">reports</TabsContent>
-      </Tabs>
+        <VisitBySource />
+      </div>
+      <div className="grid grid-cols-3 gap-4">
+        <VisitorsByCountries />
+        <div className="col-span-2">
+          <AudienceMetricsChart />
+        </div>
+      </div>
     </div>
   );
 }
